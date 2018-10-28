@@ -3,7 +3,6 @@
     <?php
     $submenu = array(
         'vision' => 'Vision',
-        'mission' => 'Mission',
         'participate' => 'Participate',
         'events' => 'Events',
         'newsletter' => 'Newsletter',
