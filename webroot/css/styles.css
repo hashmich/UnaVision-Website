@@ -1,0 +1,190 @@
+/* UnaVision Color scheme */
+/* general text coloring */
+/* base layout & responsive sizing */
+/* mini - midi - maxi screen layout base */
+/* amount of space to reserve for scrollbars, lateral whitespace */
+/* breakpoint definition - use this mixin where appropriate */
+/* basic styles */
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: Verdana, Helvetica, Arial, Sans-Serif;
+  color: #555;
+  font-size: 14px; }
+
+p {
+  margin-bottom: 0.6em;
+  text-align: justify; }
+
+ul, ol {
+  margin-bottom: 0.6em;
+  margin-left: 1em; }
+
+em {
+  color: #333;
+  font-style: italic; }
+
+/* vision */
+.vision {
+  color: #2387aa;
+  text-align: center;
+  font-size: 110%;
+  font-weight: bold;
+  padding: 2em 4em; }
+  @media only screen and (max-width: 40em) {
+    .vision {
+      padding: 2em 20px; } }
+
+.right {
+  text-align: right; }
+
+.center {
+  text-align: center; }
+
+.css-columns-2, .css-columns-3 {
+  column-gap: 3em;
+  width: 100%;
+  margin-top: 2em;
+  max-width: 1500px; }
+  .css-columns-2 h1, .css-columns-2 h2, .css-columns-2 h3, .css-columns-3 h1, .css-columns-3 h2, .css-columns-3 h3 {
+    column-span: all;
+    -webkit-column-span: all;
+    -webkit-column-break-after: avoid;
+    break-after: avoid-column; }
+  .css-columns-2 h2, .css-columns-2 h3, .css-columns-3 h2, .css-columns-3 h3 {
+    column-span: 1;
+    -webkit-column-span: 1; }
+  .css-columns-2 div, .css-columns-3 div {
+    margin-bottom: 2em; }
+
+.css-columns-2 {
+  column-count: 2;
+  column-width: 20em; }
+
+.css-columns-3 {
+  column-count: 3;
+  column-width: 18em; }
+
+/* responsive iframes in a div.iframe-container */
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+  margin-bottom: 1em; }
+  .iframe-container iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%; }
+
+/* 4x3 Aspect Ratio */
+.iframe-container-4x3 {
+  padding-top: 75%; }
+
+#container {
+  /* mini to midi screens first (no handhelds designed, yet) */
+  width: 80vw;
+  /*@include respond-to(wide-screens) {
+      max-width: $maxi-width;
+      min-width: $midi-width + 1;
+  }*/
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  margin-bottom: 300px; }
+  #container #content {
+    margin: 200px 0 0; }
+  #container #footer {
+    margin: 50px 0;
+    padding: 20px 0;
+    border-top: 2px solid #2387aa;
+    font-weight: bold;
+    font-size: 90%;
+    color: #777; }
+    #container #footer a {
+      text-decoration: underline;
+      color: #777; }
+
+/* importing styles section by section */
+#menu-container {
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 0 5px 5px #999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; }
+  #menu-container #menu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    /* mini to midi screens first (no handhelds designed, yet) */
+    width: 80vw;
+    /*@include respond-to(wide-screens) {
+        max-width: $maxi-width;
+        min-width: $midi-width + 1;
+    }*/
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-top: 20px; }
+    #menu-container #menu .logo {
+      height: 10vw;
+      width: 14vw;
+      line-height: 0;
+      font-size: 0;
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      margin: 0 20px;
+      background-position: center; }
+      #menu-container #menu .logo:last-child, #menu-container #menu .logo:first-child {
+        margin: 0; }
+      #menu-container #menu .logo:first-child {
+        background-position: left; }
+      #menu-container #menu .logo:last-child {
+        background-position: right; }
+      #menu-container #menu .logo:hover {
+        cursor: pointer; }
+      #menu-container #menu .logo.vision {
+        background-image: url(../img/logos/unavision_symbol.png); }
+        #menu-container #menu .logo.vision:hover, #menu-container #menu .logo.vision.active {
+          background-image: url(../img/logos/unavision.png);
+          width: 26vw; }
+      #menu-container #menu .logo.versity {
+        background-image: url(../img/logos/unaversity_symbol.png); }
+        #menu-container #menu .logo.versity:hover, #menu-container #menu .logo.versity.active {
+          background-image: url(../img/logos/unaversity.png);
+          width: 28.3vw; }
+      #menu-container #menu .logo.village {
+        background-image: url(../img/logos/unavillage_symbol.png); }
+        #menu-container #menu .logo.village:hover, #menu-container #menu .logo.village.active {
+          background-image: url(../img/logos/unavillage.png);
+          width: 27.3vw; }
+  #menu-container #submenu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #2387aa;
+    /* mini to midi screens first (no handhelds designed, yet) */
+    width: 80vw;
+    /*@include respond-to(wide-screens) {
+        max-width: $maxi-width;
+        min-width: $midi-width + 1;
+    }*/
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 82vw; }
+    #menu-container #submenu li {
+      margin: 0 1vw; }
+
+/*# sourceMappingURL=styles.css.map */

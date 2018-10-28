@@ -1,0 +1,87 @@
+
+$logo-height: 10vw;
+
+#menu-container {
+	position: fixed;
+	background-color: #fff;
+	box-shadow: 0 5px 5px #999;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+
+	#menu {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: flex-end;
+		@include responsive-centered;
+		padding-top: 20px;
+		
+		.logo {
+			height: $logo-height;
+			width: 1.4 * $logo-height;
+			line-height: 0;
+			font-size: 0;
+			background-size: auto 100%;	// match height!
+			background-repeat: no-repeat;
+			margin: 0 20px;
+			&:last-child, &:first-child {
+				margin: 0;
+			}
+			background-position: center;
+			&:first-child {
+				background-position: left;
+			}
+			&:last-child {
+				background-position: right;
+			}
+			&:hover {
+				cursor: pointer;
+			}
+			&.vision {
+				background-image: url(../img/logos/unavision_symbol.png);
+				&:hover, &.active {
+					background-image: url(../img/logos/unavision.png);
+					width: 2.6 * $logo-height;
+				}
+			}
+			&.versity {
+				background-image: url(../img/logos/unaversity_symbol.png);
+				&:hover, &.active {
+					background-image: url(../img/logos/unaversity.png);
+					width: 2.83 * $logo-height;
+				}
+			}
+			&.village {
+				background-image: url(../img/logos/unavillage_symbol.png);
+				&:hover, &.active {
+					background-image: url(../img/logos/unavillage.png);
+					width: 2.73 * $logo-height;
+				}
+			}
+		}
+	}
+
+	#submenu {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: flex-end;
+		list-style: none;
+		text-transform: uppercase;
+		font-size: 16px;
+		color: $blue;
+		@include responsive-centered;
+		padding-top: 1em;
+		padding-bottom: 1em;
+
+		// reserve space for the items' margin
+		//min-width: $mini-width + 20px;
+		width: 82vw;
+		li {
+			//margin-right: 20px;
+			margin: 0 1vw;
+		}
+	}
+}

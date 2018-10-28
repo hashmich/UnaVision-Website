@@ -1,0 +1,25 @@
+
+
+#container {
+    @include responsive-centered;
+    position: relative;
+    margin-bottom: 300px;
+
+    #content {
+      margin: 200px 0 0;
+    }
+
+    #footer {
+      margin: 50px 0;
+      padding: 20px 0;
+      border-top: 2px solid $blue;
+      font-weight: bold;
+      font-size: 90%;
+      color: #777;
+
+      a {
+        text-decoration: underline;
+        color: #777;
+      }
+    }
+}

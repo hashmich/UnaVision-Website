@@ -1,0 +1,31 @@
+/* breakpoint definition - use this mixin where appropriate */
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    // 40em on 14px fontsize -> 560px
+    @media only screen and (max-width: 40em) { @content; }
+  }
+  @else if $media == medium-screens {
+    // 60 em on 14px fontsize -> 840px
+    @media only screen and (min-width: 960px) { @content; }
+  }
+  @else if $media == wide-screens {
+    // 80 em on 14px fontsize -> 1120px
+    @media only screen and (min-width: 1920px) { @content; }
+  }
+}
+
+
+@mixin responsive-centered() {
+  /* mini to midi screens first (no handhelds designed, yet) */
+  //max-width: $midi-width;
+  //min-width: $mini-width;
+  width: 80vw;
+
+  /*@include respond-to(wide-screens) {
+      max-width: $maxi-width;
+      min-width: $midi-width + 1;
+  }*/
+  margin: 0 auto;
+  //padding: 0 $scrollbar + $minimum-whitespace 0 $minimum-whitespace;
+  padding: 0 $minimum-whitespace;
+}
