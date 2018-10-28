@@ -55,16 +55,12 @@ em {
 	color: $em-color;
 	font-style: italic;
 }
-/* vision */
-.vision {
+
+.summary {
 	color: $blue;
-	text-align: center;
+	text-align: left;
 	font-size: 110%;
 	font-weight: bold;
-	padding: 2em 4em;
-	@include respond-to(handhelds) {
-		padding: 2em 20px;
-	}
 }
 
 

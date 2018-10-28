@@ -1,9 +1,27 @@
+
 <ul id="submenu">
-    <li>Vision</li>
-    <li>Mission</li>
-    <li>Engage</li>
-    <li>Events</li>
-    <li>Newsletter</li>
-    <li>Downloads</li>
-    <li>[de|en]</li>
+    <?php
+    $submenu = array(
+        'vision' => 'Vision',
+        'mission' => 'Mission',
+        'participate' => 'Participate',
+        'events' => 'Events',
+        'newsletter' => 'Newsletter',
+        'downloads' => 'Downloads'
+    );
+
+    foreach($submenu as $k => $v) {
+        $active = null;
+        if($k == $request OR ($request == '/' AND $k == 'vision'))
+            $active = ' class="active"';
+
+        echo '<li'.$active.'>';
+        echo '<a href="'.Router::url($k).'">'.$v.'</a>';
+        echo '</li>';
+    }
+    ?>
+    <li class="language">
+        [ <span class="lang-select" value="en">EN</span> | <span class="lang-select" value="de">DE</span> ]
+    </li>
 </ul>
+

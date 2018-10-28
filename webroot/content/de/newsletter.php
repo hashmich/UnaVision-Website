@@ -1,15 +1,4 @@
 
-<div class="css-columns-2">
-    <h1>Newsletter Registration</h1>
-    <p>
-        Durch Eintragen Ihrer E-Mail Adresse in das unten stehende Formular registrieren
-        Sie sich für den eher allgemein gehaltenen UnaVision Newsletter (ca. 1-2 mal pro Jahr).<br>
-        Weitere Newsletter können unten für den Bereich <em>UnaVersity</em> für Veranstaltungen und
-        Bildungsangebote ausgewählt werden, häufiger erscheinende Newsletter stehen für die einzelnen
-        <em>UnaVillage</em> Standorte zur Verfügung.
-    </p>
-</div>
-
 
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
@@ -33,6 +22,15 @@
     #mc-embedded-subscribe-form .mc_fieldset{border:none;min-height: 0px;padding-bottom:0px;}
 </style>
 <div id="mc_embed_signup">
+    <h1>Newsletter Registration</h1>
+    <p>
+        Durch Eintragen Ihrer E-Mail Adresse in das unten stehende Formular registrieren
+        Sie sich für den eher allgemein gehaltenen UnaVision Newsletter (ca. 1-2 mal pro Jahr).<br>
+        Weitere Newsletter können unten für den Bereich <em>UnaVersity</em> für Veranstaltungen und
+        Bildungsangebote ausgewählt werden, häufiger erscheinende Newsletter stehen für die einzelnen
+        <em>UnaVillage</em> Standorte zur Verfügung.
+    </p>
+
     <form action="https://unavision.us6.list-manage.com/subscribe/post?u=99edeb53a18d18194a3498dee&amp;id=b335b90364" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate">
         <div id="mc_embed_signup_scroll">
 
@@ -330,7 +328,11 @@
                     <li><input value="128" name="group[18285][128]" id="mce-group[18285]-18285-6" type="checkbox"><label for="mce-group[18285]-18285-6">UnaVillage Blankensee (de)</label></li>
                 </ul>
             </div>
-            <p><a href="https://us6.campaign-archive.com/home/?u=99edeb53a18d18194a3498dee&amp;id=b335b90364" title="View previous campaigns">View previous campaigns.</a></p>
+            <p>
+                <a target="_blank"
+                   href="https://us6.campaign-archive.com/home/?u=99edeb53a18d18194a3498dee&amp;id=b335b90364"
+                   title="View previous campaigns">Vorherige Newsletter ansehen</a>
+            </p>
             <div id="mergeRow-gdpr" class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
                 <div class="content__gdpr">
                     <label>Erlaubnis zum Email Marketing</label>
@@ -342,7 +344,7 @@
                         um der Verwendung und Speicherung Ihrer Daten zu diesem Zweck zuzustimmen.
                     </p>
                     <fieldset class="mc_fieldset gdprRequired mc-field-group" name="interestgroup_field">
-                        <label class="checkbox subfield" for="gdpr_5233"><input id="gdpr_5233" name="gdpr[5233]" value="Y" class="av-checkbox gdpr" type="checkbox"><span>agree / zustimmen</span> </label>
+                        <label class="checkbox subfield" for="gdpr_5233"><input id="gdpr_5233" name="gdpr[5233]" value="Y" class="av-checkbox gdpr" type="checkbox"><span>zustimmen</span> </label>
                     </fieldset>
                     <p>
                         Sie können Ihre Meinung jederzeit ändern, indem Sie auf den Abbestellen-Link klicken,

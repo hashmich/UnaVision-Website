@@ -25,10 +25,10 @@ function debug($msg = null) {
     exit;
 }
 
-$request = '/';
+$request = 'vision';
 $title = 'UnaVision';
 $crumbs = array();
-$content_path = 'content'.DS.$language.DS.'home.php';
+$content_path = 'content'.DS.$language.DS.$request.'.php';
 
 // go for the query parameter defined in .htaccess
 if(!empty($_GET['q'])) {
@@ -46,7 +46,7 @@ if(!empty($_GET['q'])) {
 if(!file_exists('..'.DS.'webroot'.DS.$content_path)) {
     foreach($accept_languages as $al) {
         $content_path = 'content'.DS.$al.DS.$request.'.php';
-        if(file_exists($content_path)) {
+        if(file_exists('..'.DS.'webroot'.DS.$content_path)) {
             $language = $al;
             break;
         }

@@ -26,16 +26,11 @@ em {
   color: #333;
   font-style: italic; }
 
-/* vision */
-.vision {
+.summary {
   color: #2387aa;
-  text-align: center;
+  text-align: left;
   font-size: 110%;
-  font-weight: bold;
-  padding: 2em 4em; }
-  @media only screen and (max-width: 40em) {
-    .vision {
-      padding: 2em 20px; } }
+  font-weight: bold; }
 
 .right {
   text-align: right; }
@@ -186,5 +181,24 @@ em {
     width: 82vw; }
     #menu-container #submenu li {
       margin: 0 1vw; }
+      #menu-container #submenu li.active {
+        font-weight: bold; }
+      #menu-container #submenu li a {
+        text-decoration: none;
+        color: #2387aa; }
+        #menu-container #submenu li a:hover {
+          font-weight: bold;
+          text-decoration: none; }
+      #menu-container #submenu li.language {
+        color: #555;
+        font-weight: bold;
+        padding-bottom: 2px; }
+        #menu-container #submenu li.language span {
+          font-weight: normal;
+          font-size: 75%;
+          cursor: pointer; }
+          #menu-container #submenu li.language span:hover {
+            font-weight: bold;
+            text-decoration: underline; }
 
 /*# sourceMappingURL=styles.css.map */
