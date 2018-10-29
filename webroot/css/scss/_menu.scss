@@ -101,7 +101,7 @@ $logo-height: 10vw;
 					font-weight: normal;
 					font-size: 75%;
 					cursor: pointer;
-					&:hover {
+					&:hover, &.active {
 						font-weight: bold;
 						text-decoration: underline;
 					}

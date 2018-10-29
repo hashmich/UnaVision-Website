@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title><?php echo $title; ?></title>
+		<title><?php echo $Request->title; ?></title>
 		<link rel="stylesheet" href="<?php echo Router::asset('css/styles.css'); ?>">
 
 
@@ -20,7 +20,8 @@
 			
 
 			<div id="content">
-                <?php require $content_path; ?>
+                <?php //require $content_path; ?>
+                <?php echo $Request->getLanguageContent(); ?>
 			</div>
 			
 			<div id="footer">

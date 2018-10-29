@@ -197,7 +197,7 @@ em {
           font-weight: normal;
           font-size: 75%;
           cursor: pointer; }
-          #menu-container #submenu li.language span:hover {
+          #menu-container #submenu li.language span:hover, #menu-container #submenu li.language span.active {
             font-weight: bold;
             text-decoration: underline; }
 

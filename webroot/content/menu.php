@@ -1,7 +1,7 @@
 <?php
 $active = 'vision';
-if(in_array($request, array('unaversity'))) $active = 'versity';
-if(in_array($request, array('unavillage'))) $active = 'village';
+if(in_array($Request->getRequest(), array('unaversity'))) $active = 'versity';
+if(in_array($Request->getRequest(), array('unavillage'))) $active = 'village';
 ?>
 
 <div id="menu">
@@ -13,4 +13,4 @@ if(in_array($request, array('unavillage'))) $active = 'village';
        href="<?php echo Router::url('unavillage'); ?>">UnaVillage</a>
 </div>
 
-<?php include $language.DS.'submenu.php'; ?>
+<?php include $Request->getUserLanguage().DS.'submenu.php'; ?>
