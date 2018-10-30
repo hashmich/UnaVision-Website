@@ -1,6 +1,7 @@
 
 $logo-height: 9vw;
 $max-height: 130px;
+$min-height: 45px;
 
 
 
@@ -20,13 +21,15 @@ $max-height: 130px;
 
 		height: $logo-height;
 		max-height: $max-height;
+		min-height: $min-height;
 		width: 1.4 * $logo-height;	// the symbols have an unified width
 		max-width: 1.4 * $max-height;
+		min-width: 1.4 * $min-height;
 		line-height: 0;
 		font-size: 0;
 		background-size: auto 100%;	// match height!
 		background-repeat: no-repeat;
-		margin: 0 20px;
+		margin: 0 2vw;
 		&:last-child, &:first-child {
 			margin: 0;
 		}
@@ -46,6 +49,7 @@ $max-height: 130px;
 				background-image: url(../img/logos/unavision.png);
 				width: 2.6 * $logo-height;
 				max-width: 2.6 * $max-height;
+				min-width: 2.6 * $min-height;
 			}
 		}
 		&.unaversity {
@@ -54,6 +58,7 @@ $max-height: 130px;
 				background-image: url(../img/logos/unaversity.png);
 				width: 2.83 * $logo-height;
 				max-width: 2.83 * $max-height;
+				min-width: 2.83 * $min-height;
 			}
 		}
 		&.unavillage {
@@ -62,6 +67,7 @@ $max-height: 130px;
 				background-image: url(../img/logos/unavillage.png);
 				width: 2.73 * $logo-height;
 				max-width: 2.73 * $max-height;
+				min-width: 2.73 * $min-height;
 			}
 		}
 	}

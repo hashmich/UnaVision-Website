@@ -40,6 +40,14 @@ $minimum-whitespace	: 2vw;	// whitespace on both sides
 body {
 	font-family: Verdana, Helvetica, Arial, Sans-Serif;
 	color: $text-color;
+
+	// breakpoint debugging styles
+	@include respond-to(medium-screens) {
+		background-color: #9FBAED;
+	}
+	@include respond-to(handhelds) {
+		background-color: #e4b9b9;
+	}
 }
 
 h1 {
@@ -66,7 +74,7 @@ hr {
 	height: 3px;
 	color: $text-color;
 	border: none;
-	margin: 0.5em
+	margin: 0;
 }
 
 .summary {

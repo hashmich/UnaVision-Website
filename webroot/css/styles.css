@@ -12,6 +12,12 @@
 body {
   font-family: Verdana, Helvetica, Arial, Sans-Serif;
   color: #555; }
+  @media only screen and (max-width: 60em) {
+    body {
+      background-color: #9FBAED; } }
+  @media only screen and (max-width: 30em) {
+    body {
+      background-color: #e4b9b9; } }
 
 h1 {
   font-size: 1.25em;
@@ -33,7 +39,7 @@ hr {
   height: 3px;
   color: #555;
   border: none;
-  margin: 0.5em; }
+  margin: 0; }
 
 .summary {
   color: #2387aa;
@@ -111,7 +117,7 @@ hr {
     background-color: #fff;
     margin: 0 2vw; }
   #container #content {
-    margin: 2em 2vw 0; }
+    margin: 3em 2vw 0; }
     #container #content .heading {
       margin-bottom: 1em;
       position: relative; }
@@ -167,13 +173,15 @@ hr {
   #menu .logo {
     height: 9vw;
     max-height: 130px;
+    min-height: 45px;
     width: 12.6vw;
     max-width: 182px;
+    min-width: 63px;
     line-height: 0;
     font-size: 0;
     background-size: auto 100%;
     background-repeat: no-repeat;
-    margin: 0 20px;
+    margin: 0 2vw;
     background-position: center; }
     #menu .logo:last-child, #menu .logo:first-child {
       margin: 0; }
@@ -188,19 +196,22 @@ hr {
       #menu .logo.unavision:hover, #menu .logo.unavision.active {
         background-image: url(../img/logos/unavision.png);
         width: 23.4vw;
-        max-width: 338px; }
+        max-width: 338px;
+        min-width: 117px; }
     #menu .logo.unaversity {
       background-image: url(../img/logos/unaversity_symbol.png); }
       #menu .logo.unaversity:hover, #menu .logo.unaversity.active {
         background-image: url(../img/logos/unaversity.png);
         width: 25.47vw;
-        max-width: 367.9px; }
+        max-width: 367.9px;
+        min-width: 127.35px; }
     #menu .logo.unavillage {
       background-image: url(../img/logos/unavillage_symbol.png); }
       #menu .logo.unavillage:hover, #menu .logo.unavillage.active {
         background-image: url(../img/logos/unavillage.png);
         width: 24.57vw;
-        max-width: 354.9px; }
+        max-width: 354.9px;
+        min-width: 122.85px; }
 
 #submenu {
   display: flex;
