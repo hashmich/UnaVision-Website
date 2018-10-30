@@ -1,16 +1,17 @@
 
-<h1>Was ist UnaVision?</h1>
-<div class="css-columns-3">
-    <div style="display: inline-block">
-
-        <p class="summary">
-            UnaVision schafft Prototypen zur Erprobung nachhaltig enkeltauglicher Lebensstile
-            in anpassungsfähigen Dorfgemeinschaften im ländlichen Raum.<br>
-            UnaVillages als Orte transformativen Lernens
-            ermöglichen gesamtgesellschaftliche Entwicklungen durch
-            Einbeziehung des Umfeldes, Vernetzung und Wissensweitergabe.
-        </p>
-    </div>
+<div class="heading">
+    <h1>Was ist UnaVision?</h1>
+    <p class="slogan">Co-Creating Future</p>
+    <hr>
+</div>
+<div class="text-column">
+    <p class="summary">
+        UnaVision schafft Prototypen zur Erprobung nachhaltig enkeltauglicher Lebensstile
+        in anpassungsfähigen Dorfgemeinschaften im ländlichen Raum.<br>
+        UnaVillages als Orte transformativen Lernens
+        ermöglichen gesamtgesellschaftliche Entwicklungen durch
+        Einbeziehung des Umfeldes, Vernetzung und Wissensweitergabe.
+    </p>
     <p>
         <em>UnaVision</em> ist ein genossenschaftlich organisiertes Netzwerk,
         das weltweit die Gründung zukunftsfähiger Gemeinschaften im ländlichen Raum

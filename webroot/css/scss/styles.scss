@@ -5,6 +5,7 @@ $blue	: #2387aa;
 $green	: #6b8743;
 $yellow	: #bea044;
 
+
 /* general text coloring */
 $text-color: #555;
 $em-color: #333;
@@ -19,7 +20,8 @@ $mini-width	: 300px;
 
 /* amount of space to reserve for scrollbars, lateral whitespace */
 $scrollbar	: 17px;
-$minimum-whitespace	: 20px;
+$layout-width: 80vw;
+$minimum-whitespace	: 2vw;	// whitespace on both sides
 
 
 
@@ -38,12 +40,16 @@ $minimum-whitespace	: 20px;
 body {
 	font-family: Verdana, Helvetica, Arial, Sans-Serif;
 	color: $text-color;
-	font-size: 14px;
+}
+
+h1 {
+	font-size: 1.25em;
+	letter-spacing: 0.08em;
 }
 
 p {
 	margin-bottom: 0.6em;
-	text-align: justify;
+	text-align: left;
 }
 
 ul, ol {
@@ -54,6 +60,13 @@ ul, ol {
 em {
 	color: $em-color;
 	font-style: italic;
+}
+
+hr {
+	height: 3px;
+	color: $text-color;
+	border: none;
+	margin: 0.5em
 }
 
 .summary {
@@ -84,9 +97,12 @@ em {
 		column-span: 1;
 		-webkit-column-span: 1;
 	}
-
+	p {
+		text-align: justify;
+	}
 	div {
 		margin-bottom: 2em;
+		display: inline-block;
 	}
 }
 .css-columns-2 {
@@ -97,6 +113,8 @@ em {
 	column-count: 3;
 	column-width: 18em;
 }
+
+
 
 
 /* responsive iframes in a div.iframe-container */
@@ -125,6 +143,6 @@ em {
 
 @import "layout";
 
-/* importing styles section by section */
-
 @import "menu";
+
+@import "theming";

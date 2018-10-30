@@ -11,12 +11,15 @@
 
 body {
   font-family: Verdana, Helvetica, Arial, Sans-Serif;
-  color: #555;
-  font-size: 14px; }
+  color: #555; }
+
+h1 {
+  font-size: 1.25em;
+  letter-spacing: 0.08em; }
 
 p {
   margin-bottom: 0.6em;
-  text-align: justify; }
+  text-align: left; }
 
 ul, ol {
   margin-bottom: 0.6em;
@@ -25,6 +28,12 @@ ul, ol {
 em {
   color: #333;
   font-style: italic; }
+
+hr {
+  height: 3px;
+  color: #555;
+  border: none;
+  margin: 0.5em; }
 
 .summary {
   color: #2387aa;
@@ -51,8 +60,11 @@ em {
   .css-columns-2 h2, .css-columns-2 h3, .css-columns-3 h2, .css-columns-3 h3 {
     column-span: 1;
     -webkit-column-span: 1; }
+  .css-columns-2 p, .css-columns-3 p {
+    text-align: justify; }
   .css-columns-2 div, .css-columns-3 div {
-    margin-bottom: 2em; }
+    margin-bottom: 2em;
+    display: inline-block; }
 
 .css-columns-2 {
   column-count: 2;
@@ -81,20 +93,60 @@ em {
   padding-top: 75%; }
 
 #container {
-  /* mini to midi screens first (no handhelds designed, yet) */
   width: 80vw;
-  /*@include respond-to(wide-screens) {
-      max-width: $maxi-width;
-      min-width: $midi-width + 1;
-  }*/
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0;
+  min-width: 350px;
+  max-width: 1100px;
   position: relative;
   margin-bottom: 300px; }
+  #container #menu-container {
+    /*
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 5px 5px #ccc;
+    */
+    width: 100%;
+    background-color: #fff;
+    margin: 0 2vw; }
   #container #content {
-    margin: 200px 0 0; }
+    margin: 2em 2vw 0; }
+    #container #content .heading {
+      margin-bottom: 1em;
+      position: relative; }
+      #container #content .heading h1, #container #content .heading .slogan {
+        font-size: 1.25em;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        background-color: #fff;
+        padding: 0;
+        padding-right: 1em;
+        float: left; }
+      #container #content .heading .slogan {
+        padding-left: 1em;
+        padding-right: 0;
+        float: right; }
+      #container #content .heading hr {
+        top: 0.85em;
+        position: relative; }
+      @media only screen and (max-width: 30em) {
+        #container #content .heading hr {
+          display: none; } }
+      #container #content .heading::after {
+        content: "";
+        clear: both;
+        display: table; }
+    #container #content .text-column {
+      width: 60%;
+      margin: 0 auto;
+      padding: 0;
+      max-width: 800px;
+      min-width: 300px; }
+      #container #content .text-column p {
+        text-align: justify; }
   #container #footer {
-    margin: 50px 0;
+    margin: 50px 2vw;
     padding: 20px 0;
     border-top: 2px solid #2387aa;
     font-weight: bold;
@@ -104,101 +156,102 @@ em {
       text-decoration: underline;
       color: #777; }
 
-/* importing styles section by section */
-#menu-container {
-  position: fixed;
+#menu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  padding-top: 30px;
   background-color: #fff;
-  box-shadow: 0 5px 5px #999;
-  top: 0;
-  left: 0;
+  margin: 0 2vw; }
+  #menu .logo {
+    height: 9vw;
+    max-height: 130px;
+    width: 12.6vw;
+    max-width: 182px;
+    line-height: 0;
+    font-size: 0;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    margin: 0 20px;
+    background-position: center; }
+    #menu .logo:last-child, #menu .logo:first-child {
+      margin: 0; }
+    #menu .logo:first-child {
+      background-position: left; }
+    #menu .logo:last-child {
+      background-position: right; }
+    #menu .logo:hover {
+      cursor: pointer; }
+    #menu .logo.unavision {
+      background-image: url(../img/logos/unavision_symbol.png); }
+      #menu .logo.unavision:hover, #menu .logo.unavision.active {
+        background-image: url(../img/logos/unavision.png);
+        width: 23.4vw;
+        max-width: 338px; }
+    #menu .logo.unaversity {
+      background-image: url(../img/logos/unaversity_symbol.png); }
+      #menu .logo.unaversity:hover, #menu .logo.unaversity.active {
+        background-image: url(../img/logos/unaversity.png);
+        width: 25.47vw;
+        max-width: 367.9px; }
+    #menu .logo.unavillage {
+      background-image: url(../img/logos/unavillage_symbol.png); }
+      #menu .logo.unavillage:hover, #menu .logo.unavillage.active {
+        background-image: url(../img/logos/unavillage.png);
+        width: 24.57vw;
+        max-width: 354.9px; }
+
+#submenu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 1em;
   width: 100%;
-  z-index: 10; }
-  #menu-container #menu {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    /* mini to midi screens first (no handhelds designed, yet) */
-    width: 80vw;
-    /*@include respond-to(wide-screens) {
-        max-width: $maxi-width;
-        min-width: $midi-width + 1;
-    }*/
-    margin: 0 auto;
-    padding: 0 20px;
-    padding-top: 20px; }
-    #menu-container #menu .logo {
-      height: 10vw;
-      width: 14vw;
-      line-height: 0;
-      font-size: 0;
-      background-size: auto 100%;
-      background-repeat: no-repeat;
-      margin: 0 20px;
-      background-position: center; }
-      #menu-container #menu .logo:last-child, #menu-container #menu .logo:first-child {
-        margin: 0; }
-      #menu-container #menu .logo:first-child {
-        background-position: left; }
-      #menu-container #menu .logo:last-child {
-        background-position: right; }
-      #menu-container #menu .logo:hover {
-        cursor: pointer; }
-      #menu-container #menu .logo.vision {
-        background-image: url(../img/logos/unavision_symbol.png); }
-        #menu-container #menu .logo.vision:hover, #menu-container #menu .logo.vision.active {
-          background-image: url(../img/logos/unavision.png);
-          width: 26vw; }
-      #menu-container #menu .logo.versity {
-        background-image: url(../img/logos/unaversity_symbol.png); }
-        #menu-container #menu .logo.versity:hover, #menu-container #menu .logo.versity.active {
-          background-image: url(../img/logos/unaversity.png);
-          width: 28.3vw; }
-      #menu-container #menu .logo.village {
-        background-image: url(../img/logos/unavillage_symbol.png); }
-        #menu-container #menu .logo.village:hover, #menu-container #menu .logo.village.active {
-          background-image: url(../img/logos/unavillage.png);
-          width: 27.3vw; }
-  #menu-container #submenu {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    list-style: none;
-    text-transform: uppercase;
-    font-size: 16px;
-    color: #2387aa;
-    /* mini to midi screens first (no handhelds designed, yet) */
-    width: 80vw;
-    /*@include respond-to(wide-screens) {
-        max-width: $maxi-width;
-        min-width: $midi-width + 1;
-    }*/
-    margin: 0 auto;
-    padding: 0 20px;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    width: 82vw; }
-    #menu-container #submenu li {
-      margin: 0 1vw; }
-      #menu-container #submenu li.active {
-        font-weight: bold; }
-      #menu-container #submenu li a {
+  margin: 1em 0 0; }
+  #submenu li {
+    margin: 0 2vw; }
+    #submenu li.active {
+      font-weight: bold;
+      color: black; }
+    #submenu li a {
+      text-decoration: none; }
+      #submenu li a:hover {
         text-decoration: none;
-        color: #2387aa; }
-        #menu-container #submenu li a:hover {
+        color: black; }
+    #submenu li.language {
+      font-weight: bold;
+      padding-bottom: 2px; }
+      #submenu li.language span {
+        font-weight: normal;
+        font-size: 75%;
+        cursor: pointer; }
+        #submenu li.language span:hover, #submenu li.language span.active {
           font-weight: bold;
-          text-decoration: none; }
-      #menu-container #submenu li.language {
-        color: #555;
-        font-weight: bold;
-        padding-bottom: 2px; }
-        #menu-container #submenu li.language span {
-          font-weight: normal;
-          font-size: 75%;
-          cursor: pointer; }
-          #menu-container #submenu li.language span:hover, #menu-container #submenu li.language span.active {
-            font-weight: bold;
-            text-decoration: underline; }
+          text-decoration: underline; }
+
+.theme-unavision #submenu li a, .theme-unavision #submenu li span {
+  color: #2387aa; }
+.theme-unavision h1, .theme-unavision .summary, .theme-unavision .slogan, .theme-unavision hr {
+  color: #2387aa; }
+.theme-unavision hr {
+  background-color: #2387aa; }
+
+.theme-unaversity #submenu li a, .theme-unaversity #submenu li span {
+  color: #6b8743; }
+.theme-unaversity h1, .theme-unaversity .summary, .theme-unaversity .slogan, .theme-unaversity hr {
+  color: #6b8743; }
+.theme-unaversity hr {
+  background-color: #6b8743; }
+
+.theme-unavillage #submenu li a, .theme-unavillage #submenu li span {
+  color: #bea044; }
+.theme-unavillage h1, .theme-unavillage .summary, .theme-unavillage .slogan, .theme-unavillage hr {
+  color: #bea044; }
+.theme-unavillage hr {
+  background-color: #bea044; }
 
 /*# sourceMappingURL=styles.css.map */

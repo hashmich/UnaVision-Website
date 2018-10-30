@@ -1,0 +1,45 @@
+
+
+.heading {
+    margin-bottom: 1em;
+    position: relative;
+    h1, .slogan {
+        font-size: 1.25em;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        background-color: #fff;
+        padding: 0;
+        padding-right: 1em;
+        float: left;
+    }
+    .slogan {
+        padding-left: 1em;
+        padding-right: 0;
+        float: right;
+    }
+    hr {
+        top: 0.85em;
+        position: relative;
+    }
+
+    @include respond-to(handhelds) {
+        h1, .slogan {
+            //float: none;
+        }
+        hr {
+            display: none;
+        }
+    }
+    @include clearfix();
+}
+
+.text-column {
+    p { text-align: justify; }
+    @include centered(60%);
+    max-width: 800px;
+    min-width: 300px;
+    @include respond-to(handhelds) {
+
+    }
+
+}

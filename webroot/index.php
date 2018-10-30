@@ -12,11 +12,10 @@
 
 	</head>
 	<body>
-		<div id="container">
-			
-			<div id="menu-container">
-                <?php require 'content'.DS.'menu.php'; ?>
-			</div>
+
+        <div id="container" class="theme-<?php echo $Request->getTheme(); ?>">
+
+            <?php require 'content'.DS.'menu.php'; ?>
 			
 
 			<div id="content">

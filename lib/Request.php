@@ -89,6 +89,23 @@ class Request {
                 return '<p class="no-lang">Sorry, content not available in language: ' . $this->language . '</p>';
         }
     }
+
+
+
+    public function getTheme() {
+        switch($this->request) {
+            case 'events':
+            case 'unaversity':
+                return 'unaversity';
+            case 'unavillage':
+                return 'unavillage';
+            case 'vision':
+            default:
+                return 'unavision';
+        }
+    }
+
+
 }
 
 ?>

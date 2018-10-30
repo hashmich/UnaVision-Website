@@ -1,112 +1,114 @@
 
-$logo-height: 10vw;
+$logo-height: 9vw;
+$max-height: 130px;
 
-#menu-container {
-	position: fixed;
+
+
+#menu {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	//@include responsive-centered;
+	padding-top: 30px;
+
+	//width: $layout-width - $minimum-whitespace
 	background-color: #fff;
-	box-shadow: 0 5px 5px #999;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 10;
+	margin: 0 $minimum-whitespace;
 
-	#menu {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		align-items: flex-end;
-		@include responsive-centered;
-		padding-top: 20px;
-		
-		.logo {
-			height: $logo-height;
-			width: 1.4 * $logo-height;
-			line-height: 0;
-			font-size: 0;
-			background-size: auto 100%;	// match height!
-			background-repeat: no-repeat;
-			margin: 0 20px;
-			&:last-child, &:first-child {
-				margin: 0;
+	.logo {
+
+		height: $logo-height;
+		max-height: $max-height;
+		width: 1.4 * $logo-height;	// the symbols have an unified width
+		max-width: 1.4 * $max-height;
+		line-height: 0;
+		font-size: 0;
+		background-size: auto 100%;	// match height!
+		background-repeat: no-repeat;
+		margin: 0 20px;
+		&:last-child, &:first-child {
+			margin: 0;
+		}
+		background-position: center;
+		&:first-child {
+			background-position: left;
+		}
+		&:last-child {
+			background-position: right;
+		}
+		&:hover {
+			cursor: pointer;
+		}
+		&.unavision {
+			background-image: url(../img/logos/unavision_symbol.png);
+			&:hover, &.active {
+				background-image: url(../img/logos/unavision.png);
+				width: 2.6 * $logo-height;
+				max-width: 2.6 * $max-height;
 			}
-			background-position: center;
-			&:first-child {
-				background-position: left;
+		}
+		&.unaversity {
+			background-image: url(../img/logos/unaversity_symbol.png);
+			&:hover, &.active {
+				background-image: url(../img/logos/unaversity.png);
+				width: 2.83 * $logo-height;
+				max-width: 2.83 * $max-height;
 			}
-			&:last-child {
-				background-position: right;
-			}
-			&:hover {
-				cursor: pointer;
-			}
-			&.vision {
-				background-image: url(../img/logos/unavision_symbol.png);
-				&:hover, &.active {
-					background-image: url(../img/logos/unavision.png);
-					width: 2.6 * $logo-height;
-				}
-			}
-			&.versity {
-				background-image: url(../img/logos/unaversity_symbol.png);
-				&:hover, &.active {
-					background-image: url(../img/logos/unaversity.png);
-					width: 2.83 * $logo-height;
-				}
-			}
-			&.village {
-				background-image: url(../img/logos/unavillage_symbol.png);
-				&:hover, &.active {
-					background-image: url(../img/logos/unavillage.png);
-					width: 2.73 * $logo-height;
-				}
+		}
+		&.unavillage {
+			background-image: url(../img/logos/unavillage_symbol.png);
+			&:hover, &.active {
+				background-image: url(../img/logos/unavillage.png);
+				width: 2.73 * $logo-height;
+				max-width: 2.73 * $max-height;
 			}
 		}
 	}
+}
 
-	#submenu {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		align-items: flex-end;
-		list-style: none;
-		text-transform: uppercase;
-		font-size: 16px;
-		color: $blue;
-		@include responsive-centered;
-		padding-top: 1em;
-		padding-bottom: 1em;
+#submenu {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	list-style: none;
+	text-transform: uppercase;
+	font-size: 1em;
 
-		// reserve space for the items' margin
-		//min-width: $mini-width + 20px;
-		width: 82vw;
-		li {
-			//margin-right: 20px;
-			margin: 0 1vw;
-			&.active {
-				font-weight: bold;
-			}
-			a {
+	// reserve space for the items' margin
+	width: 100%; // (instead $layout-width)
+	margin: 1em 0 0;
+
+	li {
+		margin: 0 $minimum-whitespace;
+		&.active {
+			font-weight: bold;
+			color: black;
+		}
+		a {
+			text-decoration: none;
+			&:hover {
 				text-decoration: none;
-				color: $blue;
-				&:hover {
-					font-weight: bold;
-					text-decoration: none;
-				}
+				color: black;
 			}
-			&.language {
-				color: $text-color;
-				font-weight: bold;
-				padding-bottom: 2px;
-				span {
-					font-weight: normal;
-					font-size: 75%;
-					cursor: pointer;
-					&:hover, &.active {
-						font-weight: bold;
-						text-decoration: underline;
-					}
+		}
+		&.language {
+			//color: $text-color;
+			font-weight: bold;
+			padding-bottom: 2px;
+			span {
+				font-weight: normal;
+				font-size: 75%;
+				cursor: pointer;
+				&:hover, &.active {
+					font-weight: bold;
+					text-decoration: underline;
 				}
 			}
 		}
 	}
 }
+
+
+

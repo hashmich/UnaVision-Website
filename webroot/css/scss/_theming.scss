@@ -1,0 +1,35 @@
+
+
+.theme-unavision {
+    #submenu li {
+        a, span { color: $blue; }
+    }
+    h1,.summary,.slogan,hr {
+        color: $blue;
+    }
+    hr {
+        background-color: $blue;
+    }
+}
+.theme-unaversity {
+    #submenu li {
+        a, span { color: $green; }
+    }
+    h1,.summary,.slogan,hr {
+        color: $green;
+    }
+    hr {
+        background-color: $green;
+    }
+}
+.theme-unavillage {
+    #submenu li {
+        a, span { color: $yellow; }
+    }
+    h1,.summary,.slogan,hr {
+        color: $yellow;
+    }
+    hr {
+        background-color: $yellow;
+    }
+}

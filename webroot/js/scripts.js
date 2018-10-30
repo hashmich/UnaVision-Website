@@ -1,8 +1,8 @@
 
 $(document).ready(function() {
-    adjustMenuHeight();
+    //adjustMenuHeight();
     $(window).resize(function() {
-        adjustMenuHeight();
+        //adjustMenuHeight();
     });
 
     $(".lang-select").click(function() {
