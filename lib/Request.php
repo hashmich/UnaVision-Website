@@ -54,14 +54,14 @@ class Request {
 
 
     function getLanguageContent() {
+        $msg = null;
         ob_start();
         // check availability of the file in preferred language, use available language if not
         if(!file_exists('..'.DS.'webroot'.DS.$this->content_path)) {
-            echo $this->getMessage();
             foreach($this->accept_languages as $al) {
                 $this->content_path = 'content'.DS.$al.DS.$this->request.'.php';
                 if(file_exists('..'.DS.'webroot'.DS.$this->content_path)) {
-                    $this->language = $al;
+                    $msg = $this->getAlternativeLanguageMessage();
                     break;
                 }
             }
@@ -70,13 +70,16 @@ class Request {
         if(!file_exists('..'.DS.'webroot'.DS.$this->content_path)) {
             $this->content_path = 'content'.DS.'error.php';
             $title = 'Error';
+            $msg = null;
         }
 
+        echo $msg;
         require $this->content_path;
-        return ob_get_contents();
+        return ob_get_clean();
     }
 
-    private function getMessage() {
+    private function getAlternativeLanguageMessage() {
+        if($this->request != 'error')
         switch($this->language) {
             case 'de':
                 return '<p class="no-lang">Leider ist dieser Inhalt nicht auf Deutsch verfügbar.</p>';
