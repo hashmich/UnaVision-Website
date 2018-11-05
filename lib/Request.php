@@ -84,7 +84,7 @@ class Request {
             case 'de':
                 return '<p class="no-lang">Leider ist dieser Inhalt nicht auf Deutsch verfügbar.</p>';
             case 'en':
-                return '<p class="no-lang">Sorry, this content not available in English.</p>';
+                return '<p class="no-lang">Sorry, this content is not available in English.</p>';
             default:
                 return '<p class="no-lang">Sorry, content not available in language: ' . $this->language . '</p>';
         }

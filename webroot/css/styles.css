@@ -10,34 +10,56 @@
   padding: 0; }
 
 body {
-  font-family: Verdana, Helvetica, Arial, Sans-Serif;
-  color: #555; }
-  @media only screen and (max-width: 60em) {
-    body {
-      background-color: #9FBAED; } }
-  @media only screen and (max-width: 30em) {
-    body {
-      background-color: #e4b9b9; } }
+  font-family: 'Assistant', Verdana, Helvetica, Arial, Sans-Serif;
+  color: #444;
+  font-size: 110%;
+  /*
+  // breakpoint debugging styles
+  @include respond-to(medium-screens) {
+  	background-color: #9FBAED;
+  }
+  @include respond-to(handhelds) {
+  	background-color: #e4b9b9;
+  }
+  */ }
 
 h1 {
   font-size: 1.25em;
   letter-spacing: 0.08em; }
 
+h2 {
+  font-size: 1em; }
+
+h1, h2 {
+  margin: 1em 0 0.6em;
+  text-align: left;
+  line-height: 1.7em; }
+
 p {
   margin-bottom: 0.6em;
-  text-align: left; }
+  text-align: left;
+  line-height: 1.7em; }
 
 ul, ol {
   margin-bottom: 0.6em;
   margin-left: 1em; }
+  ul li, ol li {
+    line-height: 1.7em;
+    margin-bottom: 0.3em; }
 
 em {
   color: #333;
   font-style: italic; }
 
+a {
+  color: #2387aa;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
 hr {
   height: 3px;
-  color: #555;
+  color: #444;
   border: none;
   margin: 0; }
 
@@ -119,16 +141,18 @@ hr {
   #container #content {
     margin: 3em 2vw 0; }
     #container #content .heading {
-      margin-bottom: 1em;
+      margin-bottom: 3em;
       position: relative; }
       #container #content .heading h1, #container #content .heading .slogan {
         font-size: 1.25em;
+        line-height: 1.3em;
         letter-spacing: 0.08em;
         text-transform: uppercase;
         background-color: #fff;
         padding: 0;
         padding-right: 1em;
-        float: left; }
+        float: left;
+        margin-top: 0; }
       #container #content .heading .slogan {
         padding-left: 1em;
         padding-right: 0;
@@ -150,14 +174,26 @@ hr {
       max-width: 800px;
       min-width: 300px; }
       #container #content .text-column p {
-        text-align: justify; }
+        text-align: left; }
+      #container #content .text-column h2 {
+        clear: left; }
+    #container #content .illustrative {
+      width: 100%;
+      margin-bottom: 0.5em;
+      margin-top: 1.5em;
+      margin: 4em 0; }
+      #container #content .illustrative img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1em;
+        display: block; }
   #container #footer {
     margin: 50px 2vw;
-    padding: 20px 0;
-    border-top: 2px solid #2387aa;
     font-weight: bold;
     font-size: 90%;
     color: #777; }
+    #container #footer hr {
+      margin-bottom: 1.5em; }
     #container #footer a {
       text-decoration: underline;
       color: #777; }
@@ -224,7 +260,8 @@ hr {
   width: 100%;
   margin: 1em 0 0; }
   #submenu li {
-    margin: 0 2vw; }
+    margin: 0 2vw;
+    letter-spacing: 0.08em; }
     #submenu li.active {
       font-weight: bold;
       color: black; }
@@ -246,21 +283,21 @@ hr {
 
 .theme-unavision #submenu li a, .theme-unavision #submenu li span {
   color: #2387aa; }
-.theme-unavision h1, .theme-unavision .summary, .theme-unavision .slogan, .theme-unavision hr {
+.theme-unavision h1, .theme-unavision h2, .theme-unavision .summary, .theme-unavision .slogan, .theme-unavision hr {
   color: #2387aa; }
 .theme-unavision hr {
   background-color: #2387aa; }
 
 .theme-unaversity #submenu li a, .theme-unaversity #submenu li span {
   color: #6b8743; }
-.theme-unaversity h1, .theme-unaversity .summary, .theme-unaversity .slogan, .theme-unaversity hr {
+.theme-unaversity h1, .theme-unaversity h2, .theme-unaversity .summary, .theme-unaversity .slogan, .theme-unaversity hr {
   color: #6b8743; }
 .theme-unaversity hr {
   background-color: #6b8743; }
 
 .theme-unavillage #submenu li a, .theme-unavillage #submenu li span {
   color: #bea044; }
-.theme-unavillage h1, .theme-unavillage .summary, .theme-unavillage .slogan, .theme-unavillage hr {
+.theme-unavillage h1, .theme-unavillage h2, .theme-unavillage .summary, .theme-unavillage .slogan, .theme-unavillage hr {
   color: #bea044; }
 .theme-unavillage hr {
   background-color: #bea044; }

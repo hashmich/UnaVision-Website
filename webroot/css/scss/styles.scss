@@ -7,7 +7,7 @@ $yellow	: #bea044;
 
 
 /* general text coloring */
-$text-color: #555;
+$text-color: #444;
 $em-color: #333;
 
 
@@ -38,9 +38,11 @@ $minimum-whitespace	: 2vw;	// whitespace on both sides
 
 
 body {
-	font-family: Verdana, Helvetica, Arial, Sans-Serif;
+	font-family: 'Assistant', Verdana, Helvetica, Arial, Sans-Serif;
 	color: $text-color;
+	font-size: 110%;
 
+	/*
 	// breakpoint debugging styles
 	@include respond-to(medium-screens) {
 		background-color: #9FBAED;
@@ -48,26 +50,48 @@ body {
 	@include respond-to(handhelds) {
 		background-color: #e4b9b9;
 	}
+	*/
 }
 
 h1 {
 	font-size: 1.25em;
 	letter-spacing: 0.08em;
 }
+h2 {
+	font-size: 1em;
+}
+h1,h2 {
+	margin: 1em 0 0.6em;
+	text-align: left;
+	line-height: 1.7em;
+}
 
 p {
 	margin-bottom: 0.6em;
 	text-align: left;
+	line-height: 1.7em;
 }
 
 ul, ol {
 	margin-bottom: 0.6em;
 	margin-left: 1em;
+	li {
+		line-height: 1.7em;
+		margin-bottom: 0.3em;
+	}
 }
 
 em {
 	color: $em-color;
 	font-style: italic;
+}
+
+a {
+	color: $blue;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 hr {

@@ -34,7 +34,7 @@
 
 <p>
     Bankverbindung:<br>
-    GLS Bank Bochumg<br>
+    GLS Bank Bochum<br>
     IBAN: DE32 4306 0967 8205 0764 00<br>
     BIC: Genodem1GLS
 </p>

@@ -24,17 +24,16 @@ switch($Request->getTheme()) {
     );
 }
 
-
 echo '<div id="menu">';
+$i = 0;
 foreach($menu as $k => $v) {
     $class = 'class="logo '.strtolower($v);
-    if($request == $k) $class .= ' active';
+    if($i == 0) $class .= ' active';
     $class .= '"';
+    $i++;
 
     echo '<a '.$class.' href="'.Router::url($k).'">';
     echo $v;
-    //echo '<span>'.$v.'</span>';
-    //echo '<img src="'.Router::asset('img/logos/unaversity.png').'">';
     echo '</a>';
 }
 echo '</div>';

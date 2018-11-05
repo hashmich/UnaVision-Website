@@ -10,7 +10,10 @@
     <p>
         UnaVillages sind Zentren regionaler Vernetzung im urbanen und ländlichen Raum.
         Räumliche Nähe ist Voraussetzung für zukunftsfähige Verkehrs- und Wirtschaftskonzepte.
-        Standorte existieren bereits weltweit auf verschiedenen Kontinenten.
+        Standorte sind auf verschiedenen Kontinenten in Gründung oder existieren bereits.
+        Die einzelnen UnaVillages stehen im Dialog und permanenten Erfahrungsaustausch
+        mit anderen Lernorten des Netzwerks, Ökodörfern und zielführenden Initiativen
+        und Projekten.
         Die weltweit vernetzte Gemeinschaft bietet ein kulturell anregendes Umfeld.
     </p>
     <p>
@@ -28,14 +31,15 @@
     <p>
         Arbeit und Wirtschaft innerhalb der UnaVillage Regionen schaffen Gemeinwohl
         und ermöglichen individuelle Entwicklung.
-        Wertschöpfung kommt den regionalen Genossenschaften zugute.
+        Wertschöpfung durch Ansiedelung innovativer Sozialunternehmen kommt den regionalen
+        Genossenschaften zugute und schafft attraktive Arbeitsplätze im ländlichen Raum.
         Damit jeder Mitglied werden kann, sind die Einstiegshürden sehr gering.
     </p>
 
     <p>
         Kreative Vernetzung und forschendes Handeln für eine lebenswerte
-        Zukunft werden lokal und international durch <em>UnaVersity</em> unterstützt.<br>
-        Mehr zu <a href="<?php echo Router::url('unaversity'); ?>">UnaVersity</a>.
+        Zukunft werden lokal und international durch
+        <a href="<?php echo Router::url('unaversity'); ?>">UnaVersity</a> unterstützt.
     </p>
 
 </div>

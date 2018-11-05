@@ -1,16 +1,18 @@
 
 
 .heading {
-    margin-bottom: 1em;
+    margin-bottom: 3em;
     position: relative;
     h1, .slogan {
         font-size: 1.25em;
+        line-height: 1.3em;
         letter-spacing: 0.08em;
         text-transform: uppercase;
         background-color: #fff;
         padding: 0;
         padding-right: 1em;
         float: left;
+        margin-top: 0;
     }
     .slogan {
         padding-left: 1em;
@@ -34,12 +36,27 @@
 }
 
 .text-column {
-    p { text-align: justify; }
+    p { text-align: left; }
+    h2 { clear: left; }
     @include centered(60%);
     max-width: 800px;
     min-width: 300px;
     @include respond-to(handhelds) {
 
     }
+}
+
+.illustrative {
+    img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1em;
+        display: block;
+    }
+
+    width: 100%;
+    margin-bottom: 0.5em;
+    margin-top: 1.5em;
+    margin: 4em 0;
 
 }

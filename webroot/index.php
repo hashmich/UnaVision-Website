@@ -7,7 +7,11 @@
 	<head>
 		<meta charset="UTF-8">
 		<title><?php echo $Request->title; ?></title>
-		<link rel="stylesheet" href="<?php echo Router::asset('css/styles.css'); ?>">
+
+        <link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700,800"
+              rel="stylesheet">
+        <link rel="stylesheet" href="<?php echo Router::asset('css/styles.css'); ?>">
+        <link rel="stylesheet" type="text/safari" href="<?php echo Router::asset('css/safari.css'); ?>" />
 
 
 	</head>
@@ -24,8 +28,9 @@
 			</div>
 			
 			<div id="footer">
+                <hr>
 				<p>
-                    &copy; 2018 by UnaVision |
+                    &copy; 2018 |
                     <a href="<?php echo Router::url('imprint'); ?>">Impressum</a> |
                     <a href="<?php echo Router::url('privacy'); ?>">Datenschutz</a>
                 </p>
