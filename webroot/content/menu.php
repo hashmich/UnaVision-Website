@@ -32,6 +32,8 @@ foreach($menu as $k => $v) {
     $class .= '"';
     $i++;
 
+    if($k == 'vision') $k = '/';
+
     echo '<a '.$class.' href="'.Router::url($k).'">';
     echo $v;
     echo '</a>';
@@ -47,9 +49,8 @@ switch($lang) {
         $submenu = array(
             'vision' => 'Vision',
             'participate' => 'Mitmachen',
-            'events' => 'Veranstaltungen',
             'newsletter' => 'Newsletter',
-            'downloads' => 'Downloads'
+            'contact' => 'Kontakt'
         );
         break;
     case 'en':
@@ -57,9 +58,8 @@ switch($lang) {
     $submenu = array(
         'vision' => 'Vision',
         'participate' => 'Participate',
-        'events' => 'Events',
         'newsletter' => 'Newsletter',
-        'downloads' => 'Downloads'
+        'contact' => 'Contact'
     );
 }
 ?>

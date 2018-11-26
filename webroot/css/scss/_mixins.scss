@@ -6,7 +6,7 @@
     }
     @else if $media == medium-screens {
         // 60 em on 16px fontsize -> 960px
-        @media only screen and (max-width: 60em) { @content; }
+        @media only screen and (max-width: 60em) and (min-width: 30em) { @content; }
     }
     @else if $media == wide-screens {
         // 80 em on 16px fontsize -> 1280px

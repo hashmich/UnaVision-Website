@@ -8,6 +8,14 @@ $(document).ready(function() {
     $(".lang-select").click(function() {
         setLanguage($(this).attr("value"));
     });
+
+    var activeLogo = $('a.logo.active');
+
+    $('a.logo').hover(function() {
+        if(!$(this).hasClass('active')) {
+            activeLogo.toggleClass('active');
+        }
+    });
 });
 
 
