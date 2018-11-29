@@ -74,12 +74,6 @@ switch($lang) {
         echo '<a href="'.Router::url($k).'">'.$v.'</a>';
         echo '</li>';
     }
-
-
     ?>
-    <li class="language">
-        [ <span class="lang-select<?php if($lang == 'en') echo ' active'; ?>" value="en">EN</span> |
-        <span class="lang-select<?php if($lang == 'de') echo ' active'; ?>" value="de">DE</span> ]
-    </li>
 </ul>
 

@@ -1,11 +1,16 @@
 
-<h1>UnaVillage</h1>
-<div class="css-columns-3">
+<div class="heading">
+    <h1>UnaVillage</h1>
+    <p class="slogan">Enkeltauglich Leben</p>
+    <hr>
+</div>
+
+<div class="text-column">
     <p>
         Die Standorte von UnaVision sind UnaVillages. Es sind Zukunftslabore,
-        in denen regional vernetzte Gemeinschaften zusammen leben und arbeiten,
-        um Gemeinschaftliche Wohnkonzepte, nicht-kommerzielle Landwirtschaft, Permakultur und weitere
-        gemeinwohlorientierte Unternehmen in verschiedensten Bereichen erproben.
+        in denen regional vernetzte Gemeinschaften zusammen leben und arbeiten.
+        Erprobt werden gemeinschaftliche Wohnkonzepte, nicht-kommerzielle Landwirtschaft,
+        Permakultur und gemeinwohlorientierte Unternehmen in den verschiedensten Bereichen.
     </p>
     <p>
         UnaVillages sind Zentren regionaler Vernetzung im urbanen und ländlichen Raum.

@@ -58,6 +58,9 @@ h1 {
 	letter-spacing: 0.08em;
 }
 h2 {
+	font-size: 1.2em;
+}
+h3 {
 	font-size: 1em;
 }
 h1,h2 {
@@ -95,7 +98,7 @@ a {
 }
 
 hr {
-	height: 3px;
+	height: 2px;
 	color: $text-color;
 	border: none;
 	margin: 0;
@@ -106,6 +109,28 @@ hr {
 	text-align: left;
 	font-size: 110%;
 	font-weight: bold;
+}
+
+
+/* language selector */
+
+.language {
+	//color: $text-color;
+	font-weight: bold;
+	padding-bottom: 2px;
+	span {
+		font-size: 75%;
+		cursor: pointer;
+		font-weight: bold;
+		text-decoration: underline;
+		&:hover, &.active {
+			font-weight: normal;
+		}
+		&.active {
+			cursor: default;
+			text-decoration: none;
+		}
+	}
 }
 
 
@@ -124,6 +149,7 @@ hr {
 		-webkit-column-span: all;
 		-webkit-column-break-after: avoid;
 		break-after: avoid-column;
+		margin-top: 0;
 	}
 	h2, h3 {
 		column-span: 1;
@@ -135,6 +161,9 @@ hr {
 	div {
 		margin-bottom: 2em;
 		display: inline-block;
+	}
+	p, div {
+		//margin-bottom: 1em;
 	}
 }
 .css-columns-2 {

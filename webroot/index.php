@@ -28,12 +28,36 @@
 			</div>
 			
 			<div id="footer">
-                <hr>
+                <div class="slogan">
+                    <a href="<?php echo Router::url('participate'); ?>">
+                        <?php
+                        if($Request->getUserLanguage() == 'de') echo 'Visionär*innen gesucht!';
+                        else echo 'Visionaries wanted!'
+                        ?>
+                    </a>
+                    <hr>
+                </div>
+
+                <div class="thinkcamp">
+                    <a href="https://www.thinkcamp.eu" target="_blank">
+                        <img alt="ThinkCamp Logo"
+                                src="<?php echo Router::asset('img/logos/thinkcamp_inspiration_sustainability.png'); ?>">
+                    </a>
+                </div>
+
 				<p>
                     &copy; 2018 |
                     <a href="<?php echo Router::url('imprint'); ?>">Impressum</a> |
                     <a href="<?php echo Router::url('privacy'); ?>">Datenschutz</a>
                 </p>
+
+                <p class="language">
+                    Languages:
+                    [ <span class="lang-select<?php if($lang == 'en') echo ' active'; ?>" value="en">EN</span> |
+                    <span class="lang-select<?php if($lang == 'de') echo ' active'; ?>" value="de">DE</span> ]
+                </p>
+                
+
 			</div>
 			
 		</div>

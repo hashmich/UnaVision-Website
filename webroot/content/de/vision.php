@@ -1,7 +1,7 @@
 
 <div class="heading">
     <h1>Was ist UnaVision?</h1>
-    <p class="slogan">Co-Creating Future</p>
+    <p class="slogan">Zukunft gemeinsam gestalten</p>
     <hr>
 </div>
 
@@ -27,13 +27,14 @@
 <div class="text-column">
     <h2>Vision</h2>
     <p>
-        Unsere Vision ist ein gutes Leben in Zufriedenheit für alle,
-        die Pfleg-Nutzung unseres Planeten und seiner Ökosysteme zur enkeltauglichen
-        Erhaltung unserer Lebensgrundlagen.
+        Unsere Vision ist, allen Menschen ein gutes und zufriedenes Leben zu ermöglichen.
+        Die Pflege und Nutzung unseres lebendigen Planeten zur
+        Erhaltung unserer Lebensgrundlagen zählt zu unseren wichtigsten Grundsätzen.
     </p>
     <p>
         Unsere Mission ist das Anstoßen transformativer Lernprozesse.
-        Prototypische Projekte dienen der Erprobung neuer Ansätze für das zukünftige Zusammenleben von Gesellschaft, Mensch und Natur.
+        Prototypische Projekte dienen der Erprobung neuer Ansätze für das
+        zukünftige Zusammenleben von Gesellschaft, Mensch und Natur.
     </p>
 
 

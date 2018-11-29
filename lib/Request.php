@@ -79,14 +79,21 @@ class Request {
     }
 
     private function getAlternativeLanguageMessage() {
+        $alternatives = '[ <span class="lang-select' . ($this->language == 'en'?' active':'')
+            . '" value="en">EN</span> |'
+            .'<span class="lang-select' . ($this->language == 'de'?' active':'')
+            . '" value="de">DE</span> ]';
         if($this->request != 'error')
         switch($this->language) {
             case 'de':
-                return '<p class="no-lang">Leider ist dieser Inhalt nicht auf Deutsch verfügbar.</p>';
+                return '<p class="no-lang">Leider ist dieser Inhalt nicht auf Deutsch verfügbar.</p>'
+                    . '<p class="language">Alternative Sprachen: ' . $alternatives . '</p>';
             case 'en':
-                return '<p class="no-lang">Sorry, this content is not available in English.</p>';
+                return '<p class="no-lang">Sorry, this content is not available in English.</p>'
+                    . '<p class="language">Alternative languages: ' . $alternatives . '</p>';
             default:
-                return '<p class="no-lang">Sorry, content not available in language: ' . $this->language . '</p>';
+                return '<p class="no-lang">Sorry, content not available in language: ' . $this->language . '</p>'
+                    . '<p class="language">Alternative languages: ' . $alternatives . '</p>';
         }
     }
 

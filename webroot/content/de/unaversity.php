@@ -1,5 +1,11 @@
 
-<h1>UnaVersity</h1>
+<div class="heading">
+    <h1>UnaVersity</h1>
+    <p class="slogan">Transformatives Lernen</p>
+    <hr>
+</div>
+
+
 <div class="css-columns-3">
     <p>
         UnaVersity koordiniert die Angebote von Lernreisen, Traineeaufenthalten,

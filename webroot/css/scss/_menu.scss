@@ -107,20 +107,6 @@ $min-height: 60px;
 				color: black;
 			}
 		}
-		&.language {
-			//color: $text-color;
-			font-weight: bold;
-			padding-bottom: 2px;
-			span {
-				font-weight: normal;
-				font-size: 75%;
-				cursor: pointer;
-				&:hover, &.active {
-					font-weight: bold;
-					text-decoration: underline;
-				}
-			}
-		}
 	}
 }
 

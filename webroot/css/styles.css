@@ -28,6 +28,9 @@ h1 {
   letter-spacing: 0.08em; }
 
 h2 {
+  font-size: 1.2em; }
+
+h3 {
   font-size: 1em; }
 
 h1, h2 {
@@ -58,7 +61,7 @@ a {
     text-decoration: underline; }
 
 hr {
-  height: 3px;
+  height: 2px;
   color: #444;
   border: none;
   margin: 0; }
@@ -68,6 +71,21 @@ hr {
   text-align: left;
   font-size: 110%;
   font-weight: bold; }
+
+/* language selector */
+.language {
+  font-weight: bold;
+  padding-bottom: 2px; }
+  .language span {
+    font-size: 75%;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline; }
+    .language span:hover, .language span.active {
+      font-weight: normal; }
+    .language span.active {
+      cursor: default;
+      text-decoration: none; }
 
 .right {
   text-align: right; }
@@ -84,7 +102,8 @@ hr {
     column-span: all;
     -webkit-column-span: all;
     -webkit-column-break-after: avoid;
-    break-after: avoid-column; }
+    break-after: avoid-column;
+    margin-top: 0; }
   .css-columns-2 h2, .css-columns-2 h3, .css-columns-3 h2, .css-columns-3 h3 {
     column-span: 1;
     -webkit-column-span: 1; }
@@ -192,11 +211,31 @@ hr {
     font-weight: bold;
     font-size: 90%;
     color: #777; }
-    #container #footer hr {
-      margin-bottom: 1.5em; }
     #container #footer a {
-      text-decoration: underline;
+      text-decoration: none;
       color: #777; }
+      #container #footer a:hover {
+        text-decoration: underline; }
+    #container #footer .slogan {
+      position: relative;
+      text-align: center; }
+      #container #footer .slogan a {
+        background-color: #fff;
+        padding: 0 1em;
+        position: relative;
+        z-index: 15; }
+      #container #footer .slogan hr {
+        margin-bottom: 1.5em;
+        position: absolute;
+        top: 0.69em;
+        width: 100%;
+        z-index: 10; }
+    #container #footer .thinkcamp {
+      float: right;
+      width: 30%; }
+      #container #footer .thinkcamp img {
+        width: 100%;
+        height: auto; }
 
 #menu {
   display: flex;
@@ -276,34 +315,24 @@ hr {
       #submenu li a:hover {
         text-decoration: none;
         color: black; }
-    #submenu li.language {
-      font-weight: bold;
-      padding-bottom: 2px; }
-      #submenu li.language span {
-        font-weight: normal;
-        font-size: 75%;
-        cursor: pointer; }
-        #submenu li.language span:hover, #submenu li.language span.active {
-          font-weight: bold;
-          text-decoration: underline; }
 
 .theme-unavision #submenu li a, .theme-unavision #submenu li span {
   color: #2387aa; }
-.theme-unavision h1, .theme-unavision h2, .theme-unavision .summary, .theme-unavision .slogan, .theme-unavision hr {
+.theme-unavision h1, .theme-unavision h2, .theme-unavision h3, .theme-unavision .summary, .theme-unavision .slogan, .theme-unavision hr {
   color: #2387aa; }
 .theme-unavision hr {
   background-color: #2387aa; }
 
 .theme-unaversity #submenu li a, .theme-unaversity #submenu li span {
   color: #6b8743; }
-.theme-unaversity h1, .theme-unaversity h2, .theme-unaversity .summary, .theme-unaversity .slogan, .theme-unaversity hr {
+.theme-unaversity h1, .theme-unaversity h2, .theme-unaversity h3, .theme-unaversity .summary, .theme-unaversity .slogan, .theme-unaversity hr {
   color: #6b8743; }
 .theme-unaversity hr {
   background-color: #6b8743; }
 
 .theme-unavillage #submenu li a, .theme-unavillage #submenu li span {
   color: #bea044; }
-.theme-unavillage h1, .theme-unavillage h2, .theme-unavillage .summary, .theme-unavillage .slogan, .theme-unavillage hr {
+.theme-unavillage h1, .theme-unavillage h2, .theme-unavillage h3, .theme-unavillage .summary, .theme-unavillage .slogan, .theme-unavillage hr {
   color: #bea044; }
 .theme-unavillage hr {
   background-color: #bea044; }
