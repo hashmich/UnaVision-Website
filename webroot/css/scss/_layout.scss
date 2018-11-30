@@ -22,7 +22,42 @@
     #content {
         margin: 3em $minimum-whitespace 0;
 
-        @import "page_one";
+        .heading {
+            margin-bottom: 3em;
+            position: relative;
+            h1, .slogan {
+                font-size: 1.25em;
+                line-height: 1.3em;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                background-color: #fff;
+                padding: 0;
+                padding-right: 1em;
+                float: left;
+                margin-top: 0;
+            }
+            .slogan {
+                padding-left: 1em;
+                padding-right: 0;
+                float: right;
+            }
+            hr {
+                top: 0.85em;
+                position: relative;
+            }
+
+            @include respond-to(handhelds) {
+                h1, .slogan {
+                    //float: none;
+                }
+                hr {
+                    display: none;
+                }
+            }
+            @include clearfix();
+        }
+
+        @import "page_layouts";
     }
 
     #footer {
@@ -59,10 +94,10 @@
 
         .thinkcamp {
             float: right;
-            width: 30%;
+            width: auto;
 
             img {
-                width: 100%;
+                width: 190px;
                 height: auto;
             }
         }

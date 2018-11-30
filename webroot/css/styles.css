@@ -37,6 +37,8 @@ h1, h2 {
   margin: 1em 0 0.6em;
   text-align: left;
   line-height: 1.7em; }
+  h1:first-child, h2:first-child {
+    margin-top: 0; }
 
 p {
   margin-bottom: 0.6em;
@@ -93,52 +95,6 @@ hr {
 .center {
   text-align: center; }
 
-.css-columns-2, .css-columns-3 {
-  column-gap: 3em;
-  width: 100%;
-  margin-top: 2em;
-  max-width: 1500px; }
-  .css-columns-2 h1, .css-columns-2 h2, .css-columns-2 h3, .css-columns-3 h1, .css-columns-3 h2, .css-columns-3 h3 {
-    column-span: all;
-    -webkit-column-span: all;
-    -webkit-column-break-after: avoid;
-    break-after: avoid-column;
-    margin-top: 0; }
-  .css-columns-2 h2, .css-columns-2 h3, .css-columns-3 h2, .css-columns-3 h3 {
-    column-span: 1;
-    -webkit-column-span: 1; }
-  .css-columns-2 p, .css-columns-3 p {
-    text-align: justify; }
-  .css-columns-2 div, .css-columns-3 div {
-    margin-bottom: 2em;
-    display: inline-block; }
-
-.css-columns-2 {
-  column-count: 2;
-  column-width: 20em; }
-
-.css-columns-3 {
-  column-count: 3;
-  column-width: 18em; }
-
-/* responsive iframes in a div.iframe-container */
-.iframe-container {
-  overflow: hidden;
-  padding-top: 56.25%;
-  position: relative;
-  margin-bottom: 1em; }
-  .iframe-container iframe {
-    border: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%; }
-
-/* 4x3 Aspect Ratio */
-.iframe-container-4x3 {
-  padding-top: 75%; }
-
 #container {
   width: 80vw;
   margin: 0 auto;
@@ -158,7 +114,10 @@ hr {
     background-color: #fff;
     margin: 0 2vw; }
   #container #content {
-    margin: 3em 2vw 0; }
+    margin: 3em 2vw 0;
+    /* narrow column with sidebar menu */
+    /* responsive iframes in a div.iframe-container */
+    /* 4x3 Aspect Ratio */ }
     #container #content .heading {
       margin-bottom: 3em;
       position: relative; }
@@ -196,12 +155,66 @@ hr {
         text-align: left; }
       #container #content .text-column h2 {
         clear: left; }
-    #container #content .illustrative {
+    #container #content .flex-columns {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start; }
+      #container #content .flex-columns .sidebar {
+        width: 200px;
+        margin-right: 1em;
+        font-weight: bold; }
+        #container #content .flex-columns .sidebar ul {
+          list-style: none;
+          margin-left: 0; }
+      #container #content .flex-columns .narrow-column {
+        width: 40%;
+        max-width: 530px;
+        min-width: 200px; }
+        #container #content .flex-columns .narrow-column p {
+          text-align: left; }
+    #container #content .css-columns-2, #container #content .css-columns-3 {
+      column-gap: 3em;
       width: 100%;
-      margin-bottom: 0.5em;
-      margin-top: 1.5em;
-      margin: 4em 0; }
-      #container #content .illustrative img {
+      margin-top: 2em;
+      max-width: 1500px; }
+      #container #content .css-columns-2 h1, #container #content .css-columns-2 h2, #container #content .css-columns-2 h3, #container #content .css-columns-3 h1, #container #content .css-columns-3 h2, #container #content .css-columns-3 h3 {
+        column-span: all;
+        -webkit-column-span: all;
+        -webkit-column-break-after: avoid;
+        break-after: avoid-column;
+        margin-top: 0; }
+      #container #content .css-columns-2 h2, #container #content .css-columns-2 h3, #container #content .css-columns-3 h2, #container #content .css-columns-3 h3 {
+        column-span: 1;
+        -webkit-column-span: 1; }
+      #container #content .css-columns-2 p, #container #content .css-columns-3 p {
+        text-align: justify; }
+      #container #content .css-columns-2 div, #container #content .css-columns-3 div {
+        margin-bottom: 2em;
+        display: inline-block; }
+    #container #content .css-columns-2 {
+      column-count: 2;
+      column-width: 20em; }
+    #container #content .css-columns-3 {
+      column-count: 3;
+      column-width: 18em; }
+    #container #content .iframe-container {
+      overflow: hidden;
+      padding-top: 56.25%;
+      position: relative;
+      margin-bottom: 1em; }
+      #container #content .iframe-container iframe {
+        border: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%; }
+    #container #content .iframe-container-4x3 {
+      padding-top: 75%; }
+    #container #content .illustration {
+      width: 100%;
+      margin: 4em 0 2em; }
+      #container #content .illustration img {
         width: 100%;
         height: auto;
         margin-bottom: 1em;
@@ -232,9 +245,9 @@ hr {
         z-index: 10; }
     #container #footer .thinkcamp {
       float: right;
-      width: 30%; }
+      width: auto; }
       #container #footer .thinkcamp img {
-        width: 100%;
+        width: 190px;
         height: auto; }
 
 #menu {
@@ -318,21 +331,21 @@ hr {
 
 .theme-unavision #submenu li a, .theme-unavision #submenu li span {
   color: #2387aa; }
-.theme-unavision h1, .theme-unavision h2, .theme-unavision h3, .theme-unavision .summary, .theme-unavision .slogan, .theme-unavision hr {
+.theme-unavision h1, .theme-unavision h2, .theme-unavision h3, .theme-unavision .summary, .theme-unavision .slogan, .theme-unavision hr, .theme-unavision .sidebar {
   color: #2387aa; }
 .theme-unavision hr {
   background-color: #2387aa; }
 
 .theme-unaversity #submenu li a, .theme-unaversity #submenu li span {
   color: #6b8743; }
-.theme-unaversity h1, .theme-unaversity h2, .theme-unaversity h3, .theme-unaversity .summary, .theme-unaversity .slogan, .theme-unaversity hr {
+.theme-unaversity h1, .theme-unaversity h2, .theme-unaversity h3, .theme-unaversity .summary, .theme-unaversity .slogan, .theme-unaversity hr, .theme-unaversity .sidebar {
   color: #6b8743; }
 .theme-unaversity hr {
   background-color: #6b8743; }
 
 .theme-unavillage #submenu li a, .theme-unavillage #submenu li span {
   color: #bea044; }
-.theme-unavillage h1, .theme-unavillage h2, .theme-unavillage h3, .theme-unavillage .summary, .theme-unavillage .slogan, .theme-unavillage hr {
+.theme-unavillage h1, .theme-unavillage h2, .theme-unavillage h3, .theme-unavillage .summary, .theme-unavillage .slogan, .theme-unavillage hr, .theme-unavillage .sidebar {
   color: #bea044; }
 .theme-unavillage hr {
   background-color: #bea044; }

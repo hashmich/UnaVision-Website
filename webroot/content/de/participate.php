@@ -17,8 +17,16 @@
 
     <h2>Expertenwissen</h2>
     <p>
-        Menschen mit speziellen Kenntnissen oder Fähigkeiten, die ihr Wissen weitergeben möchten, können durch einen Arbeitskreis für eine Weiterbildungsmaßnahme eingeladen werden.
+        Menschen mit speziellen Kenntnissen oder Fähigkeiten, die ihr Wissen weitergeben möchten,
+        können durch einen Arbeitskreis für eine Weiterbildungsmaßnahme eingeladen werden.
         Die einladende Gemeinschaft stellt zumindest die Unterbringung und Verpflegung.
+    </p>
+
+    <h2>Workshops &amp; Offene Treffen</h2>
+    <p>
+        Im Rahmen von UnaVersity werden Kurse und Workshops angeboten, an denen Jede und Jeder teilnehmen kann.
+        An manchen Standorten finden außerdem regelmäßige Treffen statt, bei denen Interessierte die aktiven
+        Gruppenmitglieder kennen lernen und Fragen stellen können.
     </p>
 
     <h2>Mitarbeiten</h2>

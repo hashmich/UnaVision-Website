@@ -13,6 +13,9 @@
         Permakultur und gemeinwohlorientierte Unternehmen in den verschiedensten Bereichen.
     </p>
     <p>
+        Als Konzeptuelles Rahmenwerk stellen UnaVillages eine Blaupause für die
+    </p>
+    <p>
         UnaVillages sind Zentren regionaler Vernetzung im urbanen und ländlichen Raum.
         Räumliche Nähe ist Voraussetzung für zukunftsfähige Verkehrs- und Wirtschaftskonzepte.
         Standorte sind auf verschiedenen Kontinenten in Gründung oder existieren bereits.

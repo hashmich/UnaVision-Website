@@ -67,6 +67,9 @@ h1,h2 {
 	margin: 1em 0 0.6em;
 	text-align: left;
 	line-height: 1.7em;
+	&:first-child {
+		margin-top: 0;
+	}
 }
 
 p {
@@ -134,70 +137,9 @@ hr {
 }
 
 
-
 .right  { text-align: right;  }
 .center { text-align: center; }
 
-.css-columns-2, .css-columns-3 {
-	column-gap: 3em;
-	width: 100%;
-	margin-top: 2em;
-	max-width: 1500px;
-
-	h1, h2, h3 {
-		column-span: all;
-		-webkit-column-span: all;
-		-webkit-column-break-after: avoid;
-		break-after: avoid-column;
-		margin-top: 0;
-	}
-	h2, h3 {
-		column-span: 1;
-		-webkit-column-span: 1;
-	}
-	p {
-		text-align: justify;
-	}
-	div {
-		margin-bottom: 2em;
-		display: inline-block;
-	}
-	p, div {
-		//margin-bottom: 1em;
-	}
-}
-.css-columns-2 {
-	column-count: 2;
-	column-width: 20em;
-}
-.css-columns-3 {
-	column-count: 3;
-	column-width: 18em;
-}
-
-
-
-
-/* responsive iframes in a div.iframe-container */
-.iframe-container {
-	overflow: hidden;
-	padding-top: 56.25%;
-	position: relative;
-	margin-bottom: 1em;
-
-	iframe {
-		border: 0;
-		height: 100%;
-		left: 0;
-		position: absolute;
-		top: 0;
-		width: 100%;
-	}
-}
-/* 4x3 Aspect Ratio */
-.iframe-container-4x3 {
-	padding-top: 75%;
-}
 
 
 

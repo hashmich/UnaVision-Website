@@ -17,7 +17,6 @@
         <p>
             ThinkCamp eG.<br>
             Herzershof 10 <br>
-            OT Manschnow <br>
             15328 Küstriner Vorland<br>
             Germany
         </p>
@@ -33,7 +32,7 @@
         <p>
             Vertretungsberechtigter Vorstand ist Johannes Pfister.<br>
             <a href="mailto:johannes.pfister@thinkcamp.eu">johannes.pfister@thinkcamp.eu</a>,<br>
-            mobil +49 (172) 862 89 47
+            mobil +49 172 862 89 47
         </p>
     </div>
 

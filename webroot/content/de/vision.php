@@ -7,7 +7,12 @@
 
 
 
+<div class="illustration">
+    <img src="<?php echo Router::asset('img/illustration.png'); ?>">
+</div>
+
 <div class="text-column">
+    <h2>Initiativ-Netzwerk</h2>
     <p>
         UnaVision ist ein genossenschaftlich organisiertes Netzwerk,
         das weltweit die Gründung zukunftsfähiger Gemeinschaften im ländlichen Raum
@@ -17,14 +22,16 @@
         Gesamtgesellschaftliche Entwicklung und transformatives Lernen
         wird ermöglicht durch Einbeziehung des Umfeldes,
         Vernetzung und Wissensweitergabe.
-
         Die Standorte von UnaVision sind <a href="<?php echo Router::url('unavillage'); ?>">UnaVillages</a>.
     </p>
-</div>
-<div class="illustrative">
-    <img src="<?php echo Router::asset('img/illustration.png'); ?>">
-</div>
-<div class="text-column">
+    <p>
+        Die Initiative zu UnaVision wurde von der gemeinnützigen Genossenschaft
+        ThinkCamp eG. ins Leben gerufen.
+        UnaVision ist entstanden als die gemeinsame Vision vieler Menschen,
+        die in zahlreichen von ThinkCamp international organisierten Workshops und Lernreisen
+        konzeptuell erarbeitet wurde.
+    </p>
+
     <h2>Vision</h2>
     <p>
         Unsere Vision ist, allen Menschen ein gutes und zufriedenes Leben zu ermöglichen.

@@ -46,7 +46,7 @@
                 </div>
 
 				<p>
-                    &copy; 2018 |
+                    &copy; <?php echo date("Y"); ?> |
                     <a href="<?php echo Router::url('imprint'); ?>">Impressum</a> |
                     <a href="<?php echo Router::url('privacy'); ?>">Datenschutz</a>
                 </p>

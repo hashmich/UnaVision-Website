@@ -7,12 +7,44 @@ switch($Request->getTheme()) {
             'unavillage' => 'UnaVillage',
             'vision' => 'UnaVision'
         );
+        $submenu = array(
+            'unaversity' => array(
+                'de' => 'UnaVersity',
+                'en' => 'UnaVersity'
+            ),
+            'events' => array(
+                'de' => 'Veranstaltungen',
+                'en' => 'Events'
+            ),
+            'cooperations' => array(
+                'de' => 'Kooperationen',
+                'en' => 'Cooperations'
+            )
+        );
         break;
     case 'unavillage':
         $menu = array(
             'unavillage' => 'UnaVillage',
             'unaversity' => 'UnaVersity',
             'vision' => 'UnaVision'
+        );
+        $submenu = array(
+            'unavillage' => array(
+                'de' => '',
+                'en' => 'Village'
+            ),
+            'places' => array(
+                'de' => 'Standorte',
+                'en' => 'Locations'
+            ),
+            'participate' => array(
+                'de' => 'Mitmachen',
+                'en' => 'Participate'
+            ),
+            'newsletter' => array(
+                'de' => 'Newsletter',
+                'en' => 'Newsletter'
+            )
         );
         break;
     case 'unavision':
@@ -21,6 +53,28 @@ switch($Request->getTheme()) {
         'vision' => 'UnaVision',
         'unaversity' => 'UnaVersity',
         'unavillage' => 'UnaVillage'
+    );
+    $submenu = array(
+        'vision' => array(
+            'de' => 'Vision',
+            'en' => 'Vision'
+        ),
+        'participate' => array(
+            'de' => 'Mitmachen',
+            'en' => 'Participate'
+        ),
+        'newsletter' => array(
+            'de' => 'Newsletter',
+            'en' => 'Newsletter'
+        ),
+        'connect' => array(
+            'de' => 'Kontakt',
+            'en' => 'Contact'
+        ),
+        'members' => array(
+            'de' => 'Intern',
+            'en' => 'Members'
+        )
     );
 }
 
@@ -42,27 +96,7 @@ echo '</div>';
 ?>
 
 
-<?php
-$lang = $Request->getUserLanguage();
-switch($lang) {
-    case 'de':
-        $submenu = array(
-            'vision' => 'Vision',
-            'participate' => 'Mitmachen',
-            'newsletter' => 'Newsletter',
-            'contact' => 'Kontakt'
-        );
-        break;
-    case 'en':
-    default:
-    $submenu = array(
-        'vision' => 'Vision',
-        'participate' => 'Participate',
-        'newsletter' => 'Newsletter',
-        'contact' => 'Contact'
-    );
-}
-?>
+<?php $lang = $Request->getUserLanguage(); ?>
 <ul id="submenu">
     <?php
     foreach($submenu as $k => $v) {
@@ -71,7 +105,7 @@ switch($lang) {
             $active = ' class="active"';
 
         echo '<li'.$active.'>';
-        echo '<a href="'.Router::url($k).'">'.$v.'</a>';
+        echo '<a href="'.Router::url($k).'">'.$v[$lang].'</a>';
         echo '</li>';
     }
     ?>

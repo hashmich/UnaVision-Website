@@ -6,7 +6,7 @@
 </div>
 
 
-<div class="css-columns-3">
+<div class="text-column">
     <p>
         UnaVersity koordiniert die Angebote von Lernreisen, Traineeaufenthalten,
         verschiedensten Lernmodulen und ermöglicht transformatives Lernen für das
