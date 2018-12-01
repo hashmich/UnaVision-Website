@@ -8,12 +8,14 @@
 		<meta charset="UTF-8">
 		<title><?php echo $Request->title; ?></title>
 
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+
         <link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700,800"
               rel="stylesheet">
         <link rel="stylesheet" href="<?php echo Router::asset('css/styles.css'); ?>">
-        <link rel="stylesheet" type="text/safari" href="<?php echo Router::asset('css/safari.css'); ?>" />
+        <link rel="stylesheet" type="text/safari" href="<?php echo Router::asset('css/safari.css'); ?>">
 
-
+        <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css" rel="stylesheet">
 	</head>
 	<body>
 
@@ -39,10 +41,13 @@
                 </div>
 
                 <div class="thinkcamp">
-                    <a href="https://www.thinkcamp.eu" target="_blank">
-                        <img alt="ThinkCamp Logo"
-                                src="<?php echo Router::asset('img/logos/thinkcamp_inspiration_sustainability.png'); ?>">
-                    </a>
+                    <p>
+                        <a href="https://www.thinkcamp.eu" target="_blank">
+                            <img alt="ThinkCamp Logo"
+                                    src="<?php echo Router::asset('img/logos/thinkcamp.png'); ?>">
+                        </a>
+                    </p>
+                    <p>Innovation for Sustainability</p>
                 </div>
 
 				<p>
@@ -69,6 +74,7 @@
         <script type="text/javascript">
             window.jQuery || document.write('<script type="text/javascript" src="<?php echo Router::asset('js/jquery-1.12.4.min.js'); ?>"><\/script>');
         </script>
+        <script type="text/javascript" src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js"></script>
         <script id="scripts" type="text/javascript" src="<?php echo Router::asset('js/scripts.js'); ?>"></script>
 	</body>
 </html>

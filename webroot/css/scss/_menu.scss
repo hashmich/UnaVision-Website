@@ -10,15 +10,10 @@ $min-height: 60px;
 	justify-content: space-between;
 	flex-wrap: wrap;
 	align-items: flex-end;
-	//@include responsive-centered;
 	padding-top: 30px;
-
-	//width: $layout-width - $minimum-whitespace
-	background-color: #fff;
 	margin: 0 $minimum-whitespace;
 
 	.logo {
-
 		height: $logo-height;
 		max-height: $max-height;
 		min-height: $min-height;

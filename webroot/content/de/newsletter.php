@@ -1,4 +1,10 @@
 
+<div class="heading">
+    <h1>Bestens Informiert!</h1>
+    <p class="slogan">Zukunft gemeinsam gestalten</p>
+    <hr>
+</div>
+
 
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">

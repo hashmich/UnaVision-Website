@@ -1,4 +1,10 @@
 
+<div class="heading">
+    <h1>Stay in Touch!</h1>
+    <p class="slogan">Co-Creating Future</p>
+    <hr>
+</div>
+
 
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">

@@ -30,21 +30,27 @@ switch($Request->getTheme()) {
         );
         $submenu = array(
             'unavillage' => array(
-                'de' => '',
-                'en' => 'Village'
+                'de' => 'Gemeinschaft',
+                'en' => 'Community'
             ),
-            'places' => array(
+            'locations' => array(
                 'de' => 'Standorte',
                 'en' => 'Locations'
             ),
-            'participate' => array(
-                'de' => 'Mitmachen',
-                'en' => 'Participate'
+            'vision-lab' => array(
+                'de' => 'Visions-Labor',
+                'en' => 'Vision-Lab'
             ),
-            'newsletter' => array(
-                'de' => 'Newsletter',
-                'en' => 'Newsletter'
+            'prototype' => array(
+                'de' => 'Prototyp',
+                'en' => 'Prototype'
+            ),
+            /*
+            array(
+                'de' => 'Leute',
+                'en' => 'People'
             )
+            */
         );
         break;
     case 'unavision':
@@ -73,7 +79,7 @@ switch($Request->getTheme()) {
         ),
         'members' => array(
             'de' => 'Intern',
-            'en' => 'Members'
+            'en' => 'Internal'
         )
     );
 }

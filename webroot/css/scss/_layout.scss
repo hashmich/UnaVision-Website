@@ -65,7 +65,6 @@
         font-weight: bold;
         font-size: 90%;
         color: #777;
-
         a {
             text-decoration: none;
             color: #777;
@@ -77,6 +76,7 @@
         .slogan {
             position: relative;
             text-align: center;
+            margin-bottom: 2em;
             a {
                 background-color: #fff;
                 padding: 0 1em;
@@ -84,9 +84,8 @@
                 z-index: 15;
             }
             hr {
-                margin-bottom: 1.5em;
                 position: absolute;
-                top: 0.69em;
+                top: 0.75em;
                 width: 100%;
                 z-index: 10;
             }
@@ -95,7 +94,14 @@
         .thinkcamp {
             float: right;
             width: auto;
-
+            margin-top: -0.75em;
+            p {
+                margin: 0;
+            }
+            a {
+                line-height: 0;
+                display: block;
+            }
             img {
                 width: 190px;
                 height: auto;

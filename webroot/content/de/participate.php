@@ -46,8 +46,8 @@
         gemeinschaftlicher Pflichten.
         Die an den UnaVillage-Standorten lebenden Gruppen legen individuell fest,
         wie diese Pflichten gestaltet sind. Dies beinhaltet meist auch einen Beitrag zu den allgemeinen Kosten.
-        Langfristig Teil einer Gemeninschaft kann werden, wer sich regelmäßig in ein oder zwei
-        Arbeitskreisen einbringt und die Gemeinschaft der Aufnahme der Person zustimmt.
+        Langfristig Teil einer Gemeninschaft kann jeder werden, der sich regelmäßig in einem
+        Arbeitskreis einbringt und die Gemeinschaft der Aufnahme der Person zustimmt.
     </p>
 
     <h2>Sozialunternehmen</h2>

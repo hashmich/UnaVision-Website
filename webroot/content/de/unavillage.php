@@ -13,9 +13,6 @@
         Permakultur und gemeinwohlorientierte Unternehmen in den verschiedensten Bereichen.
     </p>
     <p>
-        Als Konzeptuelles Rahmenwerk stellen UnaVillages eine Blaupause für die
-    </p>
-    <p>
         UnaVillages sind Zentren regionaler Vernetzung im urbanen und ländlichen Raum.
         Räumliche Nähe ist Voraussetzung für zukunftsfähige Verkehrs- und Wirtschaftskonzepte.
         Standorte sind auf verschiedenen Kontinenten in Gründung oder existieren bereits.
@@ -39,15 +36,19 @@
     <p>
         Arbeit und Wirtschaft innerhalb der UnaVillage Regionen schaffen Gemeinwohl
         und ermöglichen individuelle Entwicklung.
-        Wertschöpfung durch Ansiedelung innovativer Sozialunternehmen kommt den regionalen
-        Genossenschaften zugute und schafft attraktive Arbeitsplätze im ländlichen Raum.
+        Wertschöpfung durch Ansiedelung innovativer Sozialunternehmen kommt den Menschen
+        der Region zugute und schafft attraktive Arbeitsplätze im ländlichen Raum.
         Damit jeder Mitglied werden kann, sind die Einstiegshürden sehr gering.
+        Entscheidungen werden innerhalb soziokratischer Arbeitskreisstrukturen erarbeitet.
     </p>
-
     <p>
         Kreative Vernetzung und forschendes Handeln für eine lebenswerte
         Zukunft werden lokal und international durch
         <a href="<?php echo Router::url('unaversity'); ?>">UnaVersity</a> unterstützt.
+    </p>
+    <p>
+        Das UnaVillage dient als konzeptueller Rahmen für Gemeinschaften,
+        die ihr Gemeinschaftsleben an der Ermöglichung transformativen Lernens ausrichten wollen.
     </p>
 
 </div>
