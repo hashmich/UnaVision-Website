@@ -4,7 +4,7 @@
     <hr>
 </div>
 
-<div class="css-columns-3">
+<div class="text-column">
 
     <div>
         <h2>Verantwortlicher für diesen Web-Auftritt</h2>
@@ -52,6 +52,13 @@
             Aufsichtsratsvorsitzende: <a href="mailto:yasmin.dorfstetter@thinkcamp.eu">Yasmin Dorfstetter (AT)</a><br>
             Aufsichtsrätin: <a href="mailto:frauke.thiel@thinkcamp.eu">Frauke Thiel (DE)</a><br>
             Aufsichtsrat: <a href="mailto:gaston.russi@thinkcamp.eu">Gaston Russi (CH)</a>
+        </p>
+    </div>
+
+    <div>
+        <h2>Satzung</h2>
+        <p>
+            <a href="<?php echo Router::url('terms') ?>">Satzung der Genossenschaft ThinkCamp gem. eG.</a>
         </p>
     </div>
 

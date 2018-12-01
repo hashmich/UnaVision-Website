@@ -51,15 +51,12 @@ $(document).ready(function() {
             {
                 name: 'Opština Tearce, Macedonia',
                 point: [21.053748, 42.076607],
-                description: '',
+                description: 'Around Tearce, in a beautyful mountain region, a network has formed' +
+                    ' to foster the UnaVillage initiative. ',
                 email: 'macedonia@unavision.eu',
                 status: 'founding'
             }
         ];
-
-
-
-
         mapboxgl.accessToken = 'pk.eyJ1IjoiaGFzaG1pY2giLCJhIjoiY2pwNGlyajN6MDQyNjNxcXVtMGt4ajBjYiJ9.jXcv_r7YL0rxLOlhloZwog';
         map = new mapboxgl.Map({
             container: 'map',
@@ -87,6 +84,37 @@ $(document).ready(function() {
                 .addTo(map);
         }
     }
+
+    if($('#general-content')) {
+        $('#general').click(function() {
+            $(this).addClass('active');
+            $('#working-circles').removeClass('active');
+            $('#locations-content').removeClass('active');
+            $('#general-content').show();
+            $('#working-circles-content').hide();
+            $('#locations-content').hide();
+        });
+        $('#working-circles').click(function() {
+            $(this).addClass('active');
+            $('#general').removeClass('active');
+            $('#locations-content').removeClass('active');
+
+            $('#general-content').hide();
+            $('#locations-content').hide();
+            $('#working-circles-content').show();
+        });
+        $('#locations').click(function() {
+            $(this).addClass('active');
+            $('#general').removeClass('active');
+            $('#working-circles').removeClass('active');
+
+            $('#general-content').hide();
+            $('#locations-content').show();
+            $('#working-circles-content').hide();
+        });
+    }
+
+    $('.notification');
 });
 
 

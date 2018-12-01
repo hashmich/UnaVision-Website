@@ -27,7 +27,9 @@
     #mergeRow-gdpr fieldset label {font-weight: normal;}
     #mc-embedded-subscribe-form .mc_fieldset{border:none;min-height: 0px;padding-bottom:0px;}
 </style>
-<div id="mc_embed_signup">
+
+
+<div id="mc_embed_signup" class="text-column">
     <h1>Newsletter Registration</h1>
     <p>
         Durch Eintragen Ihrer E-Mail Adresse in das unten stehende Formular registrieren

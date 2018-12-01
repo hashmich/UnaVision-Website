@@ -136,7 +136,7 @@ hr {
         padding-right: 0;
         float: right; }
       #container #content .heading hr {
-        top: 0.85em;
+        top: 0.86em;
         position: relative; }
       @media only screen and (max-width: 30em) {
         #container #content .heading hr {
@@ -161,15 +161,24 @@ hr {
       justify-content: flex-start; }
       #container #content .flex-columns .sidebar {
         width: 200px;
-        margin-right: 1em;
+        margin-right: 1.5em;
         font-weight: bold; }
         #container #content .flex-columns .sidebar ul {
           list-style: none;
           margin-left: 0; }
+          #container #content .flex-columns .sidebar ul li {
+            font-weight: normal;
+            cursor: pointer; }
+            #container #content .flex-columns .sidebar ul li:hover {
+              text-decoration: underline; }
+            #container #content .flex-columns .sidebar ul li.active {
+              font-weight: bold;
+              text-decoration: none;
+              cursor: default; }
       #container #content .flex-columns .narrow-column {
         width: 40%;
         max-width: 530px;
-        min-width: 200px; }
+        min-width: 300px; }
         #container #content .flex-columns .narrow-column p {
           text-align: left; }
     #container #content .css-columns-2, #container #content .css-columns-3 {

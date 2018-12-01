@@ -8,7 +8,7 @@
 
 
 <div class="illustration">
-    <img src="<?php echo Router::asset('img/illustration.png'); ?>">
+    <img src="<?php //echo Router::asset('img/illustration.png'); ?>">
 </div>
 
 <div class="text-column">

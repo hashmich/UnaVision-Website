@@ -27,7 +27,9 @@
     #mergeRow-gdpr fieldset label {font-weight: normal;}
     #mc-embedded-subscribe-form .mc_fieldset{border:none;min-height: 0px;padding-bottom:0px;}
 </style>
-<div id="mc_embed_signup">
+
+
+<div id="mc_embed_signup" class="text-column">
     <h1>Subscribe to our mailing list</h1>
     <p>
         By submitting your e-mail address through the form, you will be registered for the

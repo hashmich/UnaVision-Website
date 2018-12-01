@@ -76,7 +76,8 @@
         Beitrag zum Umweltschutz als auch zur Erhaltung individueller Gesundheit.
         Alle Mitglieder des Netzwerkes profitieren von lebendigen sozialen
         Strukturen und der Weitergabe von Wissen.
-        Eine Nachschusspflicht für Genossenschaftsmitglieder besteht nicht.
+        Eine Nachschusspflicht für Genossenschaftsmitglieder besteht nicht.<br>
+        <a href="<?php echo Router::url('terms') ?>">Satzung der Genossenschaft ThinkCamp gem. eG.</a>
     </p>
 
 </div>

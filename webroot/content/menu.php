@@ -40,7 +40,7 @@ switch($Request->getTheme()) {
             'vision-lab' => array(
                 'de' => 'Visions-Labor',
                 'en' => 'Vision-Lab'
-            ),
+            ),/*
             'prototype' => array(
                 'de' => 'Prototyp',
                 'en' => 'Prototype'
@@ -73,7 +73,7 @@ switch($Request->getTheme()) {
             'de' => 'Newsletter',
             'en' => 'Newsletter'
         ),
-        'connect' => array(
+        'contact' => array(
             'de' => 'Kontakt',
             'en' => 'Contact'
         ),

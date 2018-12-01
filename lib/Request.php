@@ -83,17 +83,20 @@ class Request {
             . '" value="en">EN</span> |'
             .'<span class="lang-select' . ($this->language == 'de'?' active':'')
             . '" value="de">DE</span> ]';
-        if($this->request != 'error')
-        switch($this->language) {
-            case 'de':
-                return '<p class="no-lang">Leider ist dieser Inhalt nicht auf Deutsch verfügbar.</p>'
-                    . '<p class="language">Alternative Sprachen: ' . $alternatives . '</p>';
-            case 'en':
-                return '<p class="no-lang">Sorry, this content is not available in English.</p>'
-                    . '<p class="language">Alternative languages: ' . $alternatives . '</p>';
-            default:
-                return '<p class="no-lang">Sorry, content not available in language: ' . $this->language . '</p>'
-                    . '<p class="language">Alternative languages: ' . $alternatives . '</p>';
+        if($this->request != 'error') {
+            $msg = null;
+            switch($this->language) {
+                case 'de':
+                    $msg = '<p class="no-lang">Leider ist dieser Inhalt nicht auf Deutsch verfügbar.</p>'
+                        . '<p class="language">Alternative Sprachen: ' . $alternatives . '</p>';
+                case 'en':
+                    $msg = '<p class="no-lang">Sorry, this content is not available in English.</p>'
+                        . '<p class="language">Alternative languages: ' . $alternatives . '</p>';
+                default:
+                    $msg = '<p class="no-lang">Sorry, content not available in language: ' . $this->language . '</p>'
+                        . '<p class="language">Alternative languages: ' . $alternatives . '</p>';
+            }
+            return '<div class="notification">'.$msg.'</div>';
         }
     }
 
@@ -107,6 +110,8 @@ class Request {
                 return 'unaversity';
             case 'unavillage':
             case 'locations':
+            case 'prototype':
+            case 'vision-lab':
                 return 'unavillage';
             case 'vision':
             default:

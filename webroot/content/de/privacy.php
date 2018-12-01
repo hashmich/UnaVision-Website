@@ -5,7 +5,7 @@
 </div>
 
 
-<div class="css-columns-3">
+<div class="text-column">
     <div>
         <h2>Verarbeitung von Nutzerdaten</h2>
         <p>
@@ -103,9 +103,7 @@
             im Impressum angegebenen Adresse an uns wenden.
         </p>
     </div>
-</div>
-<hr>
-<div class="css-columns-3">
+    <hr>
     <h2>Externe Datenverarbeitung</h2>
     <div>
         <h3>Facebook-Plugins (Like- Button)</h3>
