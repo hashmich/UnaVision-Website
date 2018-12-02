@@ -10,16 +10,17 @@
 <div class="flex-columns">
     <div class="sidebar">
         <ul>
-            <li id="general" class="active">Allgemein</li>
-            <li id="locations">Standorte</li>
+            <li id="locations" class="active">Standortkreise</li>
             <li id="working-circles">Arbeitskreise</li>
-            <li><a href="<?php echo Router::url('locations'); ?>">Standorte</a></li>
+            <li id="general">Allgemein</li>
+            <li><a href="<?php echo Router::url('locations'); ?>">Standortkarte</a></li>
         </ul>
     </div>
 
-    <div id="locations-content" class="narrow-column" style="display:none;">
+    <div id="locations-content" class="narrow-column">
         <h2>Herzershof &amp; Oderbruch</h2>
         <p>
+            Besuche bitte nach Absprache unter:<br>
             <a href="mailto:oderbruch@unavision.eu">oderbruch@unavision.eu</a>
         </p>
         <p>
@@ -29,12 +30,16 @@
             Germany
         </p>
         <p>
-            Treffen: jeden Sonntag 16:00 Uhr
+            Plenarsitzung: jeden Sonntag 16:00 Uhr
         </p>
 
         <h2>Berlin</h2>
         <p>
+            Jeden Montag im Schenkladen finden regelmäßig offene Treffen statt,
+            zu denen ganz unkompliziert jeder kommen darf, um UnaVision
+            näher kennen zu lernen und Fragen zu stellen. Kontakt unter: <br>
             <a href="mailto:berlin@unavision.eu">berlin@unavision.eu</a>
+            (Lea, Hendrik)
         </p>
         <p>
             Schenkladen Systemfehler<br>
@@ -77,7 +82,7 @@
         </p>
     </div>
 
-    <div class="narrow-column" id="general-content">
+    <div class="narrow-column" id="general-content" style="display:none;">
         <h2>Mail</h2>
         <p>
             <a href="mailto:info@unavision.eu">info@unavision.eu</a>

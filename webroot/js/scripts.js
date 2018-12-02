@@ -89,7 +89,8 @@ $(document).ready(function() {
         $('#general').click(function() {
             $(this).addClass('active');
             $('#working-circles').removeClass('active');
-            $('#locations-content').removeClass('active');
+            $('#locations').removeClass('active');
+
             $('#general-content').show();
             $('#working-circles-content').hide();
             $('#locations-content').hide();
@@ -97,7 +98,7 @@ $(document).ready(function() {
         $('#working-circles').click(function() {
             $(this).addClass('active');
             $('#general').removeClass('active');
-            $('#locations-content').removeClass('active');
+            $('#locations').removeClass('active');
 
             $('#general-content').hide();
             $('#locations-content').hide();
