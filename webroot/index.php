@@ -68,11 +68,11 @@
 		</div>
 
         <script
-                src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+                src="https://code.jquery.com/jquery-3.3.1.min.js"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
                 crossorigin="anonymous"></script>
         <script type="text/javascript">
-            window.jQuery || document.write('<script type="text/javascript" src="<?php echo Router::asset('js/jquery-1.12.4.min.js'); ?>"><\/script>');
+            window.jQuery || document.write('<script type="text/javascript" src="<?php echo Router::asset('js/jquery-3.3.1.min.js'); ?>"><\/script>');
         </script>
         <script type="text/javascript" src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js"></script>
         <script id="scripts" type="text/javascript" src="<?php echo Router::asset('js/scripts.js'); ?>"></script>

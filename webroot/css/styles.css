@@ -101,7 +101,6 @@ hr {
   padding: 0;
   min-width: 385px;
   max-width: 1100px;
-  position: relative;
   margin-bottom: 300px; }
   #container #menu-container {
     /*
@@ -285,6 +284,19 @@ hr {
       #container #footer .thinkcamp img {
         width: 190px;
         height: auto; }
+
+#notification {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 400px;
+  height: 75px;
+  padding: 20px;
+  background-color: black;
+  opacity: 0.75;
+  color: #fff;
+  z-index: 100;
+  border-radius: 10px; }
 
 #menu {
   display: flex;

@@ -89,14 +89,16 @@ class Request {
                 case 'de':
                     $msg = '<p class="no-lang">Leider ist dieser Inhalt nicht auf Deutsch verfügbar.</p>'
                         . '<p class="language">Alternative Sprachen: ' . $alternatives . '</p>';
+                    break;
                 case 'en':
                     $msg = '<p class="no-lang">Sorry, this content is not available in English.</p>'
                         . '<p class="language">Alternative languages: ' . $alternatives . '</p>';
+                    break;
                 default:
                     $msg = '<p class="no-lang">Sorry, content not available in language: ' . $this->language . '</p>'
                         . '<p class="language">Alternative languages: ' . $alternatives . '</p>';
             }
-            return '<div class="notification">'.$msg.'</div>';
+            return '<div id="notification" style="display:none;">'.$msg.'</div>';
         }
     }
 

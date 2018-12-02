@@ -4,7 +4,7 @@
     @include centered($layout-width);
     min-width: 385px;
     max-width: 1100px;
-    position: relative;
+    //position: relative;
     margin-bottom: 300px;
 
     #menu-container {
@@ -110,4 +110,19 @@
 
 
     }
+}
+
+
+#notification {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 400px;
+    height: 75px;
+    padding: 20px;
+    background-color: black;
+    opacity: 0.75;
+    color: #fff;
+    z-index: 100;
+    border-radius: 10px;
 }
