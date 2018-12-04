@@ -7,17 +7,17 @@
 
 
 
-<div class="flex-columns">
+<div class="flex-columns narrow">
     <div class="sidebar">
         <ul>
-            <li id="general" class="active">Allgemein</li>
-            <li id="locations">Standortkreise</li>
-            <li id="working-circles">Arbeitskreise</li>
+            <li data-toggle="general" class="active">Allgemein</li>
+            <li data-toggle="locations">Standortkreise</li>
+            <li data-toggle="working-circles">Arbeitskreise</li>
             <li><a href="<?php echo Router::url('locations'); ?>">Standortkarte</a></li>
         </ul>
     </div>
 
-    <div id="locations-content" class="narrow-column" style="display: none;">
+    <div id="locations" class="accordeon text-column">
         <h2>Herzershof &amp; Oderbruch</h2>
         <p>
             Besuche bitte nach Absprache unter:<br>
@@ -53,7 +53,7 @@
 
     </div>
 
-    <div id="working-circles-content" class="narrow-column" style="display:none;">
+    <div id="working-circles" class="accordeon text-column">
         <h2>Öffentlichkeitsarbeit</h2>
         <p>
             <a href="mailto:pr@unavision.eu">pr@unavision.eu</a><br>
@@ -82,7 +82,7 @@
         </p>
     </div>
 
-    <div class="narrow-column" id="general-content">
+    <div class="accordeon text-column" id="general">
         <h2>Mail</h2>
         <p>
             <a href="mailto:info@unavision.eu">info@unavision.eu</a>
