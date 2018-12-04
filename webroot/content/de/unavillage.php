@@ -49,7 +49,7 @@
     <p>
         Kreative Vernetzung und forschendes Handeln für eine lebenswerte
         Zukunft werden lokal innerhalb der Dorfgemeinschaften und international durch
-        <a href="<?php echo Router::url('unaversity'); ?>">UnaVersity</a> unterstützt.
+        <a class="unaversity" href="<?php echo Router::url('unaversity'); ?>">UnaVersity</a> unterstützt.
     </p>
 
 </div>

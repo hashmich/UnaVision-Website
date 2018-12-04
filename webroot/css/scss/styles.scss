@@ -13,11 +13,6 @@ $em-color: #333;
 
 /* base layout & responsive sizing */
 
-/* mini - midi - maxi screen layout base */
-$maxi-width	: 1500px;
-$midi-width	: 840px;
-$mini-width	: 300px;
-
 /* amount of space to reserve for scrollbars, lateral whitespace */
 $scrollbar	: 17px;
 $layout-width: 80vw;
@@ -95,8 +90,31 @@ em {
 a {
 	color: $blue;
 	text-decoration: none;
+	font-weight: bold;
 	&:hover {
-		text-decoration: underline;
+		text-decoration: none;
+		color: #ccc !important;
+	}
+}
+
+.button {
+	display: block;
+	text-decoration: none;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	border-radius: 0.5em;
+	border: 3px solid transparent;
+	text-align: center;
+	background-color: $blue;
+	color: #fff;
+	font-weight: bold;
+	margin: 2em 0;
+	&:hover {
+		border: 3px solid #ddd;
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: none;
 	}
 }
 

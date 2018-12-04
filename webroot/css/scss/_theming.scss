@@ -4,10 +4,10 @@
     #submenu li {
         a, span { color: $blue; }
     }
-    h1,h2,h3,.summary,.slogan,hr,.sidebar {
+    h1,h2,h3,.summary,.slogan,hr,.sidebar,a:not(.button) {
         color: $blue;
     }
-    hr {
+    hr, .button {
         background-color: $blue;
     }
 }
@@ -15,10 +15,10 @@
     #submenu li {
         a, span { color: $green; }
     }
-    h1,h2,h3,.summary,.slogan,hr,.sidebar {
+    h1,h2,h3,.summary,.slogan,hr,.sidebar,a:not(.button) {
         color: $green;
     }
-    hr {
+    hr, .button {
         background-color: $green;
     }
 }
@@ -26,10 +26,10 @@
     #submenu li {
         a, span { color: $yellow; }
     }
-    h1,h2,h3,.summary,.slogan,hr,.sidebar {
+    h1,h2,h3,.summary,.slogan,hr,.sidebar,a:not(.button) {
         color: $yellow;
     }
-    hr {
+    hr, .button {
         background-color: $yellow;
     }
 }

@@ -8,7 +8,7 @@
 		<meta charset="UTF-8">
 		<title><?php echo $Request->title; ?></title>
 
-        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width,shrink-to-fit=no">
 
         <link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700,800"
               rel="stylesheet">

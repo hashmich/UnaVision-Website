@@ -17,12 +17,13 @@
         UnaVision ist ein genossenschaftlich organisiertes Netzwerk,
         das weltweit die Gründung zukunftsfähiger Gemeinschaften im ländlichen Raum
         koordiniert und unterstützt.
-        Die prototypische Erforschung enkeltauglichen Lebens und Wirtschaftens
-        steht dabei im Mittelpunkt.
+        Die prototypische Erforschung enkeltauglichen Lebens, Gemeinwohlorientierung und dezentrales,
+        regionales Wirtschaften stehen dabei im Mittelpunkt.
         Gesamtgesellschaftliche Entwicklung und transformatives Lernen
         wird ermöglicht durch Einbeziehung des Umfeldes,
         Vernetzung und Wissensweitergabe.
-        Die Standorte von UnaVision sind <a href="<?php echo Router::url('unavillage'); ?>">UnaVillages</a>.
+        Die Standorte von UnaVision sind
+        <a class="unavillage" href="<?php echo Router::url('unavillage'); ?>">UnaVillages</a>.
     </p>
     <p>
         Die Initiative zu UnaVision wurde von der gemeinnützigen Genossenschaft
@@ -55,7 +56,7 @@
             nachhaltiges Leben im Einklang mit Natur und dem Umfeld.
         </li>
         <li>
-            Konzepte für zukunftsfähige Ökonomien,
+            Konzepte für gemeinwohlorientierte Ökonomien,
             öko-soziale Lebens- und Unternehmensmodelle zu entwickeln und zu realisieren.
         </li>
         <li>

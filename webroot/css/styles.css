@@ -1,7 +1,6 @@
 /* UnaVision Color scheme */
 /* general text coloring */
 /* base layout & responsive sizing */
-/* mini - midi - maxi screen layout base */
 /* amount of space to reserve for scrollbars, lateral whitespace */
 /* breakpoint definition - use this mixin where appropriate */
 /* basic styles */
@@ -58,9 +57,29 @@ em {
 
 a {
   color: #2387aa;
-  text-decoration: none; }
+  text-decoration: none;
+  font-weight: bold; }
   a:hover {
-    text-decoration: underline; }
+    text-decoration: none;
+    color: #ccc !important; }
+
+.button {
+  display: block;
+  text-decoration: none;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  border: 3px solid transparent;
+  text-align: center;
+  background-color: #2387aa;
+  color: #fff;
+  font-weight: bold;
+  margin: 2em 0; }
+  .button:hover {
+    border: 3px solid #ddd;
+    text-decoration: none; }
+  .button a:hover {
+    text-decoration: none; }
 
 hr {
   height: 2px;
@@ -99,16 +118,10 @@ hr {
   width: 80vw;
   margin: 0 auto;
   padding: 0;
-  min-width: 385px;
+  min-width: 350px;
   max-width: 1100px;
   margin-bottom: 300px; }
   #container #menu-container {
-    /*
-    position: fixed;
-    top: 0;
-    left: 0;
-    box-shadow: 0 5px 5px #ccc;
-    */
     width: 100%;
     background-color: #fff;
     margin: 0 2vw; }
@@ -137,7 +150,10 @@ hr {
       #container #content .heading hr {
         top: 0.86em;
         position: relative; }
-      @media only screen and (max-width: 30em) {
+      @media only screen and (max-width: 32em) {
+        #container #content .heading h1, #container #content .heading .slogan {
+          padding-left: 0;
+          float: none; }
         #container #content .heading hr {
           display: none; } }
       #container #content .heading::after {
@@ -308,16 +324,19 @@ hr {
   #menu .logo {
     height: 9vw;
     max-height: 130px;
-    min-height: 60px;
+    min-height: 58px;
     width: 12.6vw;
     max-width: 182px;
-    min-width: 84px;
+    min-width: 81.2px;
     line-height: 0;
     font-size: 0;
     background-size: auto 100%;
     background-repeat: no-repeat;
-    margin: 0 2vw;
+    margin: 0 1vw;
     background-position: center; }
+    @media only screen and (max-width: 32em) {
+      #menu .logo {
+        margin: 0 1vw; } }
     #menu .logo:last-child, #menu .logo:first-child {
       margin: 0; }
     #menu .logo:first-child {
@@ -332,21 +351,21 @@ hr {
         background-image: url(../img/logos/unavision.png);
         width: 23.4vw;
         max-width: 338px;
-        min-width: 156px; }
+        min-width: 150.8px; }
     #menu .logo.unaversity {
       background-image: url(../img/logos/unaversity_symbol.png); }
       #menu .logo.unaversity:hover, #menu .logo.unaversity.active {
         background-image: url(../img/logos/unaversity.png);
         width: 25.47vw;
         max-width: 367.9px;
-        min-width: 169.8px; }
+        min-width: 164.14px; }
     #menu .logo.unavillage {
       background-image: url(../img/logos/unavillage_symbol.png); }
       #menu .logo.unavillage:hover, #menu .logo.unavillage.active {
         background-image: url(../img/logos/unavillage.png);
         width: 24.57vw;
         max-width: 354.9px;
-        min-width: 163.8px; }
+        min-width: 158.34px; }
 
 #submenu {
   display: flex;
@@ -358,43 +377,48 @@ hr {
   font-size: 1em;
   width: 100%;
   margin: 1em 0 0; }
-  @media only screen and (max-width: 30em) {
+  @media only screen and (max-width: 32em) {
     #submenu {
       font-size: 0.7em; } }
-  @media only screen and (max-width: 60em) and (min-width: 30em) {
+  @media only screen and (max-width: 60em) and (min-width: 32em) {
     #submenu {
       font-size: 0.8em; } }
   #submenu li {
-    margin: 0 2vw;
+    margin: 0 1vw;
     letter-spacing: 0.08em; }
+    #submenu li:first-child {
+      margin-left: 2vw; }
+    #submenu li:last-child {
+      margin-right: 2vw; }
     #submenu li.active {
       font-weight: bold;
       color: black; }
     #submenu li a {
-      text-decoration: none; }
+      text-decoration: none;
+      font-weight: normal; }
       #submenu li a:hover {
         text-decoration: none;
         color: black; }
 
 .theme-unavision #submenu li a, .theme-unavision #submenu li span {
   color: #2387aa; }
-.theme-unavision h1, .theme-unavision h2, .theme-unavision h3, .theme-unavision .summary, .theme-unavision .slogan, .theme-unavision hr, .theme-unavision .sidebar {
+.theme-unavision h1, .theme-unavision h2, .theme-unavision h3, .theme-unavision .summary, .theme-unavision .slogan, .theme-unavision hr, .theme-unavision .sidebar, .theme-unavision a:not(.button) {
   color: #2387aa; }
-.theme-unavision hr {
+.theme-unavision hr, .theme-unavision .button {
   background-color: #2387aa; }
 
 .theme-unaversity #submenu li a, .theme-unaversity #submenu li span {
   color: #6b8743; }
-.theme-unaversity h1, .theme-unaversity h2, .theme-unaversity h3, .theme-unaversity .summary, .theme-unaversity .slogan, .theme-unaversity hr, .theme-unaversity .sidebar {
+.theme-unaversity h1, .theme-unaversity h2, .theme-unaversity h3, .theme-unaversity .summary, .theme-unaversity .slogan, .theme-unaversity hr, .theme-unaversity .sidebar, .theme-unaversity a:not(.button) {
   color: #6b8743; }
-.theme-unaversity hr {
+.theme-unaversity hr, .theme-unaversity .button {
   background-color: #6b8743; }
 
 .theme-unavillage #submenu li a, .theme-unavillage #submenu li span {
   color: #bea044; }
-.theme-unavillage h1, .theme-unavillage h2, .theme-unavillage h3, .theme-unavillage .summary, .theme-unavillage .slogan, .theme-unavillage hr, .theme-unavillage .sidebar {
+.theme-unavillage h1, .theme-unavillage h2, .theme-unavillage h3, .theme-unavillage .summary, .theme-unavillage .slogan, .theme-unavillage hr, .theme-unavillage .sidebar, .theme-unavillage a:not(.button) {
   color: #bea044; }
-.theme-unavillage hr {
+.theme-unavillage hr, .theme-unavillage .button {
   background-color: #bea044; }
 
 /*# sourceMappingURL=styles.css.map */

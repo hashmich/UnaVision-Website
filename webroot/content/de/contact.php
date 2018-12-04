@@ -10,14 +10,14 @@
 <div class="flex-columns">
     <div class="sidebar">
         <ul>
-            <li id="locations" class="active">Standortkreise</li>
+            <li id="general" class="active">Allgemein</li>
+            <li id="locations">Standortkreise</li>
             <li id="working-circles">Arbeitskreise</li>
-            <li id="general">Allgemein</li>
             <li><a href="<?php echo Router::url('locations'); ?>">Standortkarte</a></li>
         </ul>
     </div>
 
-    <div id="locations-content" class="narrow-column">
+    <div id="locations-content" class="narrow-column" style="display: none;">
         <h2>Herzershof &amp; Oderbruch</h2>
         <p>
             Besuche bitte nach Absprache unter:<br>
@@ -82,16 +82,10 @@
         </p>
     </div>
 
-    <div class="narrow-column" id="general-content" style="display:none;">
+    <div class="narrow-column" id="general-content">
         <h2>Mail</h2>
         <p>
             <a href="mailto:info@unavision.eu">info@unavision.eu</a>
-        </p>
-
-        <h2>Telefon</h2>
-        <p>
-            Johannes Pfister, CEO ThinkCamp eG.<br>
-            +49 172 862 89 47
         </p>
 
         <h2>Anschrift</h2>

@@ -2,18 +2,11 @@
 
 #container {
     @include centered($layout-width);
-    min-width: 385px;
+    min-width: 350px;
     max-width: 1100px;
-    //position: relative;
     margin-bottom: 300px;
 
     #menu-container {
-        /*
-        position: fixed;
-        top: 0;
-        left: 0;
-        box-shadow: 0 5px 5px #ccc;
-        */
         width: 100%;
         background-color: #fff;
         margin: 0 $minimum-whitespace;
@@ -48,7 +41,8 @@
 
             @include respond-to(handhelds) {
                 h1, .slogan {
-                    //float: none;
+                    padding-left: 0;
+                    float: none;
                 }
                 hr {
                     display: none;
