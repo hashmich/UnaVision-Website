@@ -24,15 +24,18 @@
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
+    @include centered(80%);
 
     .sidebar {
-        margin-right: 1.5em;
+        margin-right: 3em;
         margin-bottom: 2em;
+        font-size: 1.25em;
         ul {
             list-style: none;
             margin-left: 0;
             li {
                 font-weight: normal;
+                //text-align: right;
                 cursor: pointer;
                 &:hover {
                     text-decoration: underline;
@@ -51,12 +54,16 @@
             }
         }
     }
+    .main-column {
+        width: 60%;
+    }
     .text-column {
-        max-width: 800px;
-        min-width: 300px;
         margin: 0;
+        width: unset;
     }
     @include respond-to(medium-screens) {
+        width: 100%;
+        margin: 0;
         .text-column {
             width: auto;
             flex: 1;
@@ -64,8 +71,7 @@
     }
     @include respond-to(handhelds) {
         .sidebar {
-            width: 100%;
-            margin-right: 0;
+            display: none;
         }
         .text-column {
             width: 100%;

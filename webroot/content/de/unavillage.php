@@ -12,6 +12,13 @@
         Erprobt werden gemeinschaftliche Wohnkonzepte, nicht-kommerzielle Landwirtschaft,
         Permakultur und gemeinwohlorientierte Unternehmen in den verschiedensten Bereichen.
     </p>
+</div>
+
+<div class="illustration">
+    <img src="<?php echo Router::asset('img/illustration/UnaVillage1.png'); ?>">
+</div>
+
+<div class="text-column">
     <h2>Vernetzung</h2>
     <p>
         UnaVillages sind Zentren regionaler Vernetzung im urbanen und ländlichen Raum.
@@ -29,6 +36,13 @@
         Regionale Genossenschaften ermöglichen eine solidarische Selbstversorgung und
         gemeinschaftliches Wohnen, Leben und Arbeiten.
     </p>
+</div>
+
+<div class="illustration">
+    <img src="<?php echo Router::asset('img/illustration/UnaVillage2.png'); ?>">
+</div>
+
+<div class="text-column">
     <h2>Selbstversorgung</h2>
     <p>
         Selbstversorgung in natürlichen Kreisläufen ist wichtig für die Gesundheit

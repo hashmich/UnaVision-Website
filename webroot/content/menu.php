@@ -1,13 +1,14 @@
 <?php
+$menu = array(
+    'vision' => 'UnaVision',
+    'unaversity' => 'UnaVersity',
+    'unavillage' => 'UnaVillage'
+);
+
 $request = $Request->getRequest();
 switch($Request->getTheme()) {
     case 'unaversity':
-        $menu = array(
-            'unaversity' => 'UnaVersity',
-            'unavillage' => 'UnaVillage',
-            'vision' => 'UnaVision'
-        );
-        $submenu = array(
+         $submenu = array(
             'unaversity' => array(
                 'de' => 'UnaVersity',
                 'en' => 'UnaVersity'
@@ -16,18 +17,13 @@ switch($Request->getTheme()) {
                 'de' => 'Veranstaltungen',
                 'en' => 'Events'
             ),
-            'cooperations' => array(
-                'de' => 'Kooperationen',
-                'en' => 'Cooperations'
+            'vision-lab' => array(
+                'de' => 'Visions-Labor',
+                'en' => 'Vision-Lab'
             )
         );
         break;
     case 'unavillage':
-        $menu = array(
-            'unavillage' => 'UnaVillage',
-            'unaversity' => 'UnaVersity',
-            'vision' => 'UnaVision'
-        );
         $submenu = array(
             'unavillage' => array(
                 'de' => 'Gemeinschaft',
@@ -37,9 +33,9 @@ switch($Request->getTheme()) {
                 'de' => 'Standorte',
                 'en' => 'Locations'
             ),
-            'vision-lab' => array(
-                'de' => 'Visions-Labor',
-                'en' => 'Vision-Lab'
+            'cooperations' => array(
+                'de' => 'Kooperationen',
+                'en' => 'Cooperations'
             ),/*
             'prototype' => array(
                 'de' => 'Prototyp',
@@ -55,11 +51,7 @@ switch($Request->getTheme()) {
         break;
     case 'unavision':
     default:
-    $menu = array(
-        'vision' => 'UnaVision',
-        'unaversity' => 'UnaVersity',
-        'unavillage' => 'UnaVillage'
-    );
+
     $submenu = array(
         'vision' => array(
             'de' => 'Vision',
@@ -88,7 +80,7 @@ echo '<div id="menu">';
 $i = 0;
 foreach($menu as $k => $v) {
     $class = 'class="logo '.strtolower($v);
-    if($i == 0) $class .= ' active';
+    if($Request->getTheme() == strtolower($v)) $class .= ' active';
     $class .= '"';
     $i++;
 

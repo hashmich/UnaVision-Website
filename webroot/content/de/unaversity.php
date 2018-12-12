@@ -14,6 +14,13 @@
         Weitere Aktivitäten sind die Begleitung von Lernprozessen
         und die Entwicklung innovativer Plattformen für projektbasiertes, selbstverantwortliches Lernen.
     </p>
+</div>
+
+<div class="illustration">
+    <img src="<?php echo Router::asset('img/illustration/UnaVersity.png'); ?>">
+</div>
+
+<div class="text-column">
     <p>
         Die Grundidee von UnaVersity ist, Zeit und Raum für transformatives Lernen und forschendes
         Handeln bereit zu stellen und Vernetzung zu unterstützen. Die Bildung von Netzwerken soll

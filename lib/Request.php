@@ -108,12 +108,12 @@ class Request {
         switch($this->request) {
             case 'events':
             case 'unaversity':
-            case 'cooperations':
+            case 'vision-lab':
+            case 'prototype':
                 return 'unaversity';
             case 'unavillage':
             case 'locations':
-            case 'prototype':
-            case 'vision-lab':
+            case 'cooperations':
                 return 'unavillage';
             case 'vision':
             default:

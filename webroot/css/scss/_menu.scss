@@ -81,7 +81,7 @@ $min-height: 58px;
 	font-size: 1em;
 	// reserve space for the items' margin
 	width: 100%; // (instead $layout-width)
-	margin: 1em 0 0;
+	margin: 43px 0 0;
 	@include respond-to(handhelds) {
 		font-size: 0.7em;
 	}
@@ -107,7 +107,6 @@ $min-height: 58px;
 
 		a {
 			text-decoration: none;
-			font-weight: normal;
 			&:hover {
 				text-decoration: none;
 				color: black;

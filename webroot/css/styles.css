@@ -1,5 +1,5 @@
 /* UnaVision Color scheme */
-/* general text coloring */
+/* general text formatting */
 /* base layout & responsive sizing */
 /* amount of space to reserve for scrollbars, lateral whitespace */
 /* breakpoint definition - use this mixin where appropriate */
@@ -10,37 +10,32 @@
 
 body {
   font-family: 'Assistant', Verdana, Helvetica, Arial, Sans-Serif;
-  color: #444;
-  font-size: 110%;
-  /*
-  // breakpoint debugging styles
-  @include respond-to(medium-screens) {
-  	background-color: #9FBAED;
-  }
-  @include respond-to(handhelds) {
-  	background-color: #e4b9b9;
-  }
-  */ }
+  color: #000; }
 
 h1 {
   font-size: 1.25em;
-  letter-spacing: 0.08em; }
+  letter-spacing: 0.08em;
+  font-weight: normal; }
 
 h2 {
-  font-size: 1.2em; }
-
-h3 {
-  font-size: 1em; }
-
-h1, h2 {
-  margin: 1em 0 0.6em;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 1em 0 0em;
   text-align: left;
   line-height: 1.7em; }
-  h1:first-child, h2:first-child {
-    margin-top: 0; }
+
+h3 {
+  font-size: 0.9em;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 1em 0 0em; }
+
+h1:first-child, h2:first-child, h3:first-child {
+  margin-top: 0; }
 
 p {
-  margin-bottom: 0.6em;
+  margin-bottom: 1.2em;
   text-align: left;
   line-height: 1.7em; }
 
@@ -57,8 +52,7 @@ em {
 
 a {
   color: #2387aa;
-  text-decoration: none;
-  font-weight: bold; }
+  text-decoration: none; }
   a:hover {
     text-decoration: underline; }
 
@@ -73,7 +67,7 @@ a {
   background-color: #2387aa;
   color: #fff;
   font-weight: bold;
-  margin: 2em 0; }
+  margin: 3em 0; }
   .button:hover {
     border: 3px solid #ddd;
     text-decoration: none; }
@@ -82,7 +76,7 @@ a {
 
 hr {
   height: 2px;
-  color: #444;
+  color: #000;
   border: none;
   margin: 0; }
 
@@ -141,20 +135,18 @@ hr {
         padding: 0;
         padding-right: 1em;
         float: left;
-        margin-top: 0; }
+        margin-top: 0;
+        position: relative;
+        z-index: 5; }
       #container #content .heading .slogan {
         padding-left: 1em;
         padding-right: 0;
         float: right; }
       #container #content .heading hr {
         top: 0.86em;
-        position: relative; }
-      @media only screen and (max-width: 32em) {
-        #container #content .heading h1, #container #content .heading .slogan {
-          padding-left: 0;
-          float: none; }
-        #container #content .heading hr {
-          display: none; } }
+        position: absolute;
+        z-index: 3;
+        width: 100%; }
       #container #content .heading::after {
         content: "";
         clear: both;
@@ -182,10 +174,14 @@ hr {
       display: flex;
       flex-wrap: wrap;
       align-items: flex-start;
-      justify-content: flex-start; }
+      justify-content: flex-start;
+      width: 80%;
+      margin: 0 auto;
+      padding: 0; }
       #container #content .flex-columns .sidebar {
-        margin-right: 1.5em;
-        margin-bottom: 2em; }
+        margin-right: 3em;
+        margin-bottom: 2em;
+        font-size: 1.25em; }
         #container #content .flex-columns .sidebar ul {
           list-style: none;
           margin-left: 0; }
@@ -202,18 +198,21 @@ hr {
               font-weight: normal; }
               #container #content .flex-columns .sidebar ul li a:hover {
                 color: inherit; }
+      #container #content .flex-columns .main-column {
+        width: 60%; }
       #container #content .flex-columns .text-column {
-        max-width: 800px;
-        min-width: 300px;
-        margin: 0; }
+        margin: 0;
+        width: unset; }
       @media only screen and (max-width: 60em) {
-        #container #content .flex-columns .text-column {
-          width: auto;
-          flex: 1; } }
+        #container #content .flex-columns {
+          width: 100%;
+          margin: 0; }
+          #container #content .flex-columns .text-column {
+            width: auto;
+            flex: 1; } }
       @media only screen and (max-width: 32em) {
         #container #content .flex-columns .sidebar {
-          width: 100%;
-          margin-right: 0; }
+          display: none; }
         #container #content .flex-columns .text-column {
           width: 100%; } }
       #container #content .flex-columns.narrow {
@@ -416,7 +415,7 @@ hr {
   text-transform: uppercase;
   font-size: 1em;
   width: 100%;
-  margin: 1em 0 0; }
+  margin: 43px 0 0; }
   @media only screen and (max-width: 32em) {
     #submenu {
       font-size: 0.7em; } }
@@ -434,8 +433,7 @@ hr {
       font-weight: bold;
       color: black; }
     #submenu li a {
-      text-decoration: none;
-      font-weight: normal; }
+      text-decoration: none; }
       #submenu li a:hover {
         text-decoration: none;
         color: black; }

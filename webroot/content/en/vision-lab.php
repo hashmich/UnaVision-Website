@@ -39,9 +39,24 @@
         finally visionaries of all fields.
         Participation is limited to about 20 people.
     </p>
-    <h2>Presentation</h2>
+
+    <h2>When</h2>
     <p>
-        A public presentation of the results is planned for Saturday, March 9th.
+        March, 1. till 10. 2019<br>
+        The results will be presented publicly on Saturday, 9th of March.
+    </p>
+
+    <h2>Where</h2>
+    <p>
+        Herzershof<br>
+        Herzershof 10<br>
+        15328 Küstriner Vorland
+    </p>
+    <p>
+        Getting there with public transport from Berlin possible via station Gorgast.
+        Trains are commuting regularly between Berlin Ostkreuz and Kostrzyn in Poland.
+        An alternative connection is via Frankfurt (Oder). Busline 696 to Seelow bus station
+        has a stop in Herzershof.
     </p>
 
     <a class="button"

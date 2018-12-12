@@ -6,9 +6,10 @@ $green	: #6b8743;
 $yellow	: #bea044;
 
 
-/* general text coloring */
-$text-color: #444;
+/* general text formatting */
+$text-color: #000;
 $em-color: #333;
+$line-height: 1.7em;
 
 
 /* base layout & responsive sizing */
@@ -35,49 +36,47 @@ $minimum-whitespace	: 2vw;	// whitespace on both sides
 body {
 	font-family: 'Assistant', Verdana, Helvetica, Arial, Sans-Serif;
 	color: $text-color;
-	font-size: 110%;
-
-	/*
-	// breakpoint debugging styles
-	@include respond-to(medium-screens) {
-		background-color: #9FBAED;
+	@include respond-to(wide-screens) {
+		//font-size: 110%;
 	}
-	@include respond-to(handhelds) {
-		background-color: #e4b9b9;
-	}
-	*/
 }
 
 h1 {
 	font-size: 1.25em;
 	letter-spacing: 0.08em;
+	font-weight: normal;
 }
 h2 {
-	font-size: 1.2em;
+	font-size: 1em;
+	font-weight: bold;
+	margin: 1em 0 0em;
+	text-align: left;
+	line-height: $line-height;
 }
 h3 {
-	font-size: 1em;
+	font-size: 0.9em;
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	margin: 1em 0 0em;
 }
-h1,h2 {
-	margin: 1em 0 0.6em;
-	text-align: left;
-	line-height: 1.7em;
+h1,h2,h3 {
 	&:first-child {
 		margin-top: 0;
 	}
 }
 
 p {
-	margin-bottom: 0.6em;
+	margin-bottom: 1.2em;
 	text-align: left;
-	line-height: 1.7em;
+	line-height: $line-height;
 }
 
 ul, ol {
 	margin-bottom: 0.6em;
 	margin-left: 1em;
 	li {
-		line-height: 1.7em;
+		line-height: $line-height;
 		margin-bottom: 0.3em;
 	}
 }
@@ -90,7 +89,6 @@ em {
 a {
 	color: $blue;
 	text-decoration: none;
-	font-weight: bold;
 	&:hover {
 		text-decoration: underline;
 	}
@@ -107,7 +105,7 @@ a {
 	background-color: $blue;
 	color: #fff;
 	font-weight: bold;
-	margin: 2em 0;
+	margin: 3em 0;
 	&:hover {
 		border: 3px solid #ddd;
 		text-decoration: none;

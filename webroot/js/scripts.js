@@ -107,6 +107,11 @@ $(document).ready(function() {
     if($('#notification').length) {
         $('#notification').slideDown('fast').delay(8000).fadeOut('slow');
     }
+
+    hideWrappedBlock('flex-columns', 'sidebar');
+    $(window).resize(function() {
+        hideWrappedBlock('flex-columns', 'sidebar');
+    });
 });
 
 
@@ -122,4 +127,43 @@ function setLanguage(lang) {
     document.cookie = "language="+lang+"; expires="+expiry.toUTCString()+";";
     // forced reload, bypassing caches
     window.location.reload(true);
+}
+
+function detectWrap(className) {
+    var wrappedItems = [];
+    var prevItem = {};
+    var currItem = {};
+    var items = $('.'+className).children();
+    for (var i = 0; i < items.length; i++) {
+        currItem = items[i].getBoundingClientRect();
+        if (prevItem && prevItem.top < currItem.top) {
+            wrappedItems.push(items[i]);
+        }
+        prevItem = currItem;
+    };
+    return wrappedItems;
+}
+
+function hideWrappedBlock(containerClass, targetClass) {
+    $('.' + targetClass).show();
+    var wrappedItems = detectWrap(containerClass);
+    if (wrappedItems.length > 0) {
+        //$('.' + targetClass).hide();
+        headingNavigation();
+    }
+}
+
+function headingNavigation() {
+    //$('.accordeon').parent().css('display','block');
+    $('.accordeon').each(function() {
+        /*
+        $(this).show(); // unhide all elements from previous sidebar navigation
+        // attach click handler to each heading (first child)
+        $(this).children('*:first-child').click(function() {
+            $('.accordeon > *:nth-child(2)').hide();
+            $(this).next().show();
+        });
+        */
+    });
+    //$('.accordeon h2')[0].click();
 }

@@ -35,9 +35,24 @@
         Architekten, Landschfatsplaner und Visionäre.
         Die Teilnehmerzahl ist auf 20 Leute begrenzt.
     </p>
-    <h2>Präsentation</h2>
+
+    <h2>Wann</h2>
     <p>
-        Eine öffentliche Präsentation der Ergebnisse findet statt am Samstag, 9. März.
+        1. bis 10. März 2019<br>
+        Eine öffentliche Präsentation der Ergebnisse findet am Samstag, dem 9. März statt.
+    </p>
+
+    <h2>Wo</h2>
+    <p>
+        Herzershof<br>
+        Herzershof 10<br>
+        15328 Küstriner Vorland
+    </p>
+    <p>
+        Die Anreise von Berlin ist mit ÖPNV möglich über den Bahnhof Gorgast.
+        Züge dorthin fahren regelmäßig zwischen Berlin Ostkreuz und Kostrzyn in Polen.
+        Eine alternative Verbindung besteht über Frankfurt Oder:
+        die Buslinie 969 in Richtung Seelow Busbahnhof hat einen Halt in Herzershof.
     </p>
 
     <a class="button"

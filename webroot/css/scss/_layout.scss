@@ -28,6 +28,8 @@
                 padding-right: 1em;
                 float: left;
                 margin-top: 0;
+                position: relative;
+                z-index: 5;
             }
             .slogan {
                 padding-left: 1em;
@@ -36,21 +38,13 @@
             }
             hr {
                 top: 0.86em;
-                position: relative;
-            }
-
-            @include respond-to(handhelds) {
-                h1, .slogan {
-                    padding-left: 0;
-                    float: none;
-                }
-                hr {
-                    display: none;
-                }
+                position: absolute;
+                z-index: 3;
+                width: 100%;
             }
             @include clearfix();
         }
-
+        
         @import "page_layouts";
     }
 
