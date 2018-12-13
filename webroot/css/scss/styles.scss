@@ -81,9 +81,16 @@ ul, ol {
 	}
 }
 
+img {
+	outline: none;
+}
+
 em {
-	color: $em-color;
-	font-style: italic;
+	font-size: 0.9em;
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	font-style: normal;
 }
 
 a {

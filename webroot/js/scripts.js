@@ -87,20 +87,7 @@ $(document).ready(function() {
 
 
     if($('.sidebar').length && $('.accordeon').length) {
-        $('.sidebar').find('[data-toggle]').each(function(i) {
-            $(this).click(function() {
-                var target = $(this).attr('data-toggle');
-                $('.accordeon').each(function() {
-                    $(this).hide();
-                });
-                $('.sidebar').find('[data-toggle]').each(function(i) {
-                    $(this).removeClass('active');
-                });
-                $('#'+target).show();
-                $(this).addClass('active');
-            });
-        });
-        $('.sidebar .active').click();
+        sidebarNavigation('.flex-columns', '.sidebar', '.accordeon');
     }
 
 
@@ -108,18 +95,16 @@ $(document).ready(function() {
         $('#notification').slideDown('fast').delay(8000).fadeOut('slow');
     }
 
-    hideWrappedBlock('flex-columns', 'sidebar');
-    $(window).resize(function() {
-        hideWrappedBlock('flex-columns', 'sidebar');
-    });
+
 });
 
 
-
+/*
 function adjustMenuHeight() {
     var menuHeight = $('#menu-container').height();
     $('#content').css('margin-top', menuHeight + 50 + 'px');
 }
+*/
 
 function setLanguage(lang) {
     // expiry in 14 days
@@ -129,11 +114,57 @@ function setLanguage(lang) {
     window.location.reload(true);
 }
 
-function detectWrap(className) {
+
+/**
+ *
+ * @param nav           The single navigation element, containing all the navigation elements.
+ * @param container     The many container elements, which are being toggled by the nav items.
+ *                      Container elements have to be identified by an id attribute, which is
+ *                      referred to in the data-toggle attribute in the nav items
+ */
+function sidebarNavigation(flex, nav, content) {
+    $(nav).find('[data-toggle]').each(function(i) {
+        $(this).click(function() {
+            var target = $(this).attr('data-toggle');
+            $(content).each(function() {
+                $(this).hide();
+            });
+            $(nav).find('[data-toggle]').each(function(i) {
+                $(this).removeClass('active');
+            });
+            $('#'+target).show();   // show content
+            $(this).addClass('active');
+        });
+    });
+    $(nav + ' .active').click();
+
+    // check if the page navigation is inside a flex element:
+    // hide the nav and make all content visible on small screens!
+    hideWrappedNav(flex, nav, content);
+    $(window).resize(function() {
+        hideWrappedNav(flex, nav, content);
+    });
+}
+
+function hideWrappedNav(flex, nav, content) {
+    $(nav).show();
+    $($(flex).children('.main-column')[0]).attr('style','');
+    $(nav + ' .active').click();
+    var wrappedItems = detectWrap(flex);
+    if (wrappedItems.length > 0) {
+        $(nav).hide();
+        $($(flex).children('.main-column')[0]).attr('style','width:100%');
+        $(content).each(function() {
+            $(this).show();
+        });
+    }
+}
+
+function detectWrap(flex) {
     var wrappedItems = [];
     var prevItem = {};
     var currItem = {};
-    var items = $('.'+className).children();
+    var items = $(flex).children();
     for (var i = 0; i < items.length; i++) {
         currItem = items[i].getBoundingClientRect();
         if (prevItem && prevItem.top < currItem.top) {
@@ -142,28 +173,4 @@ function detectWrap(className) {
         prevItem = currItem;
     };
     return wrappedItems;
-}
-
-function hideWrappedBlock(containerClass, targetClass) {
-    $('.' + targetClass).show();
-    var wrappedItems = detectWrap(containerClass);
-    if (wrappedItems.length > 0) {
-        //$('.' + targetClass).hide();
-        headingNavigation();
-    }
-}
-
-function headingNavigation() {
-    //$('.accordeon').parent().css('display','block');
-    $('.accordeon').each(function() {
-        /*
-        $(this).show(); // unhide all elements from previous sidebar navigation
-        // attach click handler to each heading (first child)
-        $(this).children('*:first-child').click(function() {
-            $('.accordeon > *:nth-child(2)').hide();
-            $(this).next().show();
-        });
-        */
-    });
-    //$('.accordeon h2')[0].click();
 }

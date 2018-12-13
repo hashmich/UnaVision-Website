@@ -46,9 +46,15 @@ ul, ol {
     line-height: 1.7em;
     margin-bottom: 0.3em; }
 
+img {
+  outline: none; }
+
 em {
-  color: #333;
-  font-style: italic; }
+  font-size: 0.9em;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-style: normal; }
 
 a {
   color: #2387aa;
@@ -147,6 +153,9 @@ hr {
         position: absolute;
         z-index: 3;
         width: 100%; }
+      @media only screen and (max-width: 32em) {
+        #container #content .heading h1, #container #content .heading .slogan {
+          font-size: 1em; } }
       #container #content .heading::after {
         content: "";
         clear: both;
@@ -207,14 +216,16 @@ hr {
         #container #content .flex-columns {
           width: 100%;
           margin: 0; }
-          #container #content .flex-columns .text-column {
+          #container #content .flex-columns .main-column .text-column {
             width: auto;
             flex: 1; } }
       @media only screen and (max-width: 32em) {
         #container #content .flex-columns .sidebar {
           display: none; }
-        #container #content .flex-columns .text-column {
-          width: 100%; } }
+        #container #content .flex-columns .main-column {
+          width: 100%; }
+          #container #content .flex-columns .main-column .text-column {
+            width: 100%; } }
       #container #content .flex-columns.narrow {
         width: 60%;
         margin: 0 auto;
@@ -306,17 +317,16 @@ hr {
   #container #footer {
     margin: 50px 2vw;
     font-weight: bold;
-    font-size: 90%;
-    color: #777; }
+    font-size: 90%; }
     #container #footer a {
       text-decoration: none;
-      color: #777; }
+      color: #000; }
       #container #footer a:hover {
         text-decoration: underline; }
     #container #footer .slogan {
       position: relative;
       text-align: center;
-      margin-bottom: 2em; }
+      margin-bottom: 1.5em; }
       #container #footer .slogan a {
         background-color: #fff;
         padding: 0 1em;
@@ -327,15 +337,31 @@ hr {
         top: 0.75em;
         width: 100%;
         z-index: 10; }
-    #container #footer .thinkcamp {
+    #container #footer > hr {
+      margin-bottom: 2em; }
+      #container #footer > hr:last-child {
+        clear: both; }
+    #container #footer ul {
+      list-style: none;
+      margin: 0 2em 2em 0;
+      float: left; }
+    #container #footer .address {
       float: right;
-      width: auto;
-      margin-top: -0.75em; }
-      #container #footer .thinkcamp p {
+      margin-bottom: 2em;
+      margin-left: 3em; }
+      #container #footer .address p {
         margin: 0; }
+    @media only screen and (max-width: 32em) {
+      #container #footer ul, #container #footer .address {
+        margin: 0 0 2em; } }
+    #container #footer .thinkcamp {
+      margin: 0 auto 2em;
+      width: 190px; }
+      #container #footer .thinkcamp p {
+        margin: 0;
+        text-align: center; }
       #container #footer .thinkcamp a {
-        line-height: 0;
-        display: block; }
+        line-height: 0; }
       #container #footer .thinkcamp img {
         width: 190px;
         height: auto; }
@@ -440,21 +466,21 @@ hr {
 
 .theme-unavision #submenu li a, .theme-unavision #submenu li span {
   color: #2387aa; }
-.theme-unavision h1, .theme-unavision h2, .theme-unavision h3, .theme-unavision .summary, .theme-unavision .slogan, .theme-unavision hr, .theme-unavision .sidebar, .theme-unavision a:not(.button) {
+.theme-unavision h1, .theme-unavision h2, .theme-unavision h3, .theme-unavision em, .theme-unavision .summary, .theme-unavision .slogan, .theme-unavision hr, .theme-unavision .sidebar, .theme-unavision a:not(.button) {
   color: #2387aa; }
 .theme-unavision hr, .theme-unavision .button {
   background-color: #2387aa; }
 
 .theme-unaversity #submenu li a, .theme-unaversity #submenu li span {
   color: #6b8743; }
-.theme-unaversity h1, .theme-unaversity h2, .theme-unaversity h3, .theme-unaversity .summary, .theme-unaversity .slogan, .theme-unaversity hr, .theme-unaversity .sidebar, .theme-unaversity a:not(.button) {
+.theme-unaversity h1, .theme-unaversity h2, .theme-unaversity h3, .theme-unaversity em, .theme-unaversity .summary, .theme-unaversity .slogan, .theme-unaversity hr, .theme-unaversity .sidebar, .theme-unaversity a:not(.button) {
   color: #6b8743; }
 .theme-unaversity hr, .theme-unaversity .button {
   background-color: #6b8743; }
 
 .theme-unavillage #submenu li a, .theme-unavillage #submenu li span {
   color: #bea044; }
-.theme-unavillage h1, .theme-unavillage h2, .theme-unavillage h3, .theme-unavillage .summary, .theme-unavillage .slogan, .theme-unavillage hr, .theme-unavillage .sidebar, .theme-unavillage a:not(.button) {
+.theme-unavillage h1, .theme-unavillage h2, .theme-unavillage h3, .theme-unavillage em, .theme-unavillage .summary, .theme-unavillage .slogan, .theme-unavillage hr, .theme-unavillage .sidebar, .theme-unavillage a:not(.button) {
   color: #bea044; }
 .theme-unavillage hr, .theme-unavillage .button {
   background-color: #bea044; }

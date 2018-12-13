@@ -40,28 +40,37 @@
                     <hr>
                 </div>
 
+                <hr>
+
+                <ul>
+                    <li>&copy; <?php echo date("Y"); ?></li>
+                    <li><a href="<?php echo Router::url('imprint'); ?>">Impressum</a></li>
+                    <li><a href="<?php echo Router::url('privacy'); ?>">Datenschutz</a></li>
+                    <li class="language">
+                        Languages:
+                        <span class="lang-select<?php if($lang == 'en') echo ' active'; ?>" value="en">EN</span> /
+                        <span class="lang-select<?php if($lang == 'de') echo ' active'; ?>" value="de">DE</span>
+                    </li>
+                </ul>
+
+                <div class="address">
+                    <p>ThinkCamp gem. eG.</p>
+                    <p>Herzershof 10</p>
+                    <p>15328 Küstriner Vorland</p>
+                    <p>Germany</p>
+                </div>
+
                 <div class="thinkcamp">
-                    <p>
-                        <a href="https://www.thinkcamp.eu" target="_blank">
-                            <img alt="ThinkCamp Logo"
-                                    src="<?php echo Router::asset('img/logos/thinkcamp.png'); ?>">
-                        </a>
-                    </p>
+                    <a href="https://www.thinkcamp.eu" target="_blank">
+                            <img alt="ThinkCamp"
+                                    src="<?php echo Router::asset('img/logos/thinkcamp_black.png'); ?>">
+                    </a>
                     <p>Innovation for Sustainability</p>
                 </div>
 
-				<p>
-                    &copy; <?php echo date("Y"); ?> |
-                    <a href="<?php echo Router::url('imprint'); ?>">Impressum</a> |
-                    <a href="<?php echo Router::url('privacy'); ?>">Datenschutz</a>
-                </p>
 
-                <p class="language">
-                    Languages:
-                    [ <span class="lang-select<?php if($lang == 'en') echo ' active'; ?>" value="en">EN</span> |
-                    <span class="lang-select<?php if($lang == 'de') echo ' active'; ?>" value="de">DE</span> ]
-                </p>
-                
+
+                <hr>
 
 			</div>
 			

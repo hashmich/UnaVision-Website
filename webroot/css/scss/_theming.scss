@@ -4,7 +4,7 @@
     #submenu li {
         a, span { color: $blue; }
     }
-    h1,h2,h3,.summary,.slogan,hr,.sidebar,a:not(.button) {
+    h1,h2,h3,em,.summary,.slogan,hr,.sidebar,a:not(.button) {
         color: $blue;
     }
     hr, .button {
@@ -15,7 +15,7 @@
     #submenu li {
         a, span { color: $green; }
     }
-    h1,h2,h3,.summary,.slogan,hr,.sidebar,a:not(.button) {
+    h1,h2,h3,em,.summary,.slogan,hr,.sidebar,a:not(.button) {
         color: $green;
     }
     hr, .button {
@@ -26,7 +26,7 @@
     #submenu li {
         a, span { color: $yellow; }
     }
-    h1,h2,h3,.summary,.slogan,hr,.sidebar,a:not(.button) {
+    h1,h2,h3,em,.summary,.slogan,hr,.sidebar,a:not(.button) {
         color: $yellow;
     }
     hr, .button {

@@ -64,17 +64,24 @@
     @include respond-to(medium-screens) {
         width: 100%;
         margin: 0;
-        .text-column {
-            width: auto;
-            flex: 1;
+        .main-column {
+            //width: 80%;
+            //margin: 0 auto;
+            .text-column {
+                width: auto;
+                flex: 1;
+            }
         }
     }
     @include respond-to(handhelds) {
         .sidebar {
             display: none;
         }
-        .text-column {
+        .main-column {
             width: 100%;
+            .text-column {
+                width: 100%;
+            }
         }
     }
 

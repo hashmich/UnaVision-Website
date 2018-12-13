@@ -53,8 +53,9 @@
             <h2>Mitarbeit</h2>
             <p>
                 Die ehrenamtliche Mitarbeit im gemeinnützigen Bereich ist jederzeit von fast überall möglich.
-                Weiter ist die Unterstützung durch Mitarbeit ist im Rahmen von projektbasiertem Lernen als Trainee,
-                über Freiwilligendienste oder in Weiterbildungsprogrammen möglich.
+                Bei Interesse bitte die entsprechenden Arbeitskreise kontaktieren.
+                Weiter ist die Unterstützung durch Mitarbeit ist im Rahmen von projektbasiertem Lernen
+                als Trainee, über Freiwilligendienste oder in Weiterbildungsprogrammen möglich.
                 Eine reguläre Mitarbeit innerhalb der Gemeinschaften erfordert, Mitglied einer der mit dem
                 Standort verbundenen Genossenschaft zu werden.
                 Gegebenenfalls sind fest vereinbarte Arbeitsstunden im Rahmen einer Anstellung möglich,
@@ -66,12 +67,14 @@
         <div id="community" class="accordeon text-column">
             <h2>Gemeinschaft</h2>
             <p>
-                Die Teilhabe am Gemeinschaftsleben erfordert auch bei vorübergehenden Gästen die Übernahme
+                Die Teilhabe am Gemeinschaftsleben ist für alle Menschen möglich.
+                Ein Teil der Gemeinschaft zu sein, bedeutet jedoch auch die Übernahme
                 gemeinschaftlicher Pflichten.
                 Die an den UnaVillage-Standorten lebenden Gruppen legen individuell fest,
-                wie diese Pflichten gestaltet sind. Dies beinhaltet meist auch einen Beitrag zu den allgemeinen Kosten.
-                Langfristig Teil einer Gemeninschaft kann jeder werden, der sich regelmäßig in einem
-                Arbeitskreis einbringt und die Gemeinschaft der Aufnahme der Person zustimmt.
+                wie diese Pflichten gestaltet sind. Dies beinhaltet meist auch einen Beitrag
+                zu den allgemeinen Kosten.
+                Vorraussetzung, um langfristig Teil einer Gemeninschaft zu werden ist, sich
+                regelmäßig in Arbeitskreisen einzubringen und die Zustimmung der Gruppe.
                 <a class="button" href="<?php echo Router::url('locations'); ?>">Zu den Standorten</a>
             </p>
         </div>
@@ -84,6 +87,10 @@
                 die an den Standorten nachhaltige Arbeits- und Ausbildungsplätze schaffen.
                 Sozialunternehmen können einen wichtigen Beitrag für die bürgernahe Versorgung oder
                 selbst verwaltete Versorgungsnetze bilden.
+                Die Genossenschaft bildet eine Dachorganisation für die ansonsten selbstständigen
+                Unternehmen, wie etwa Architekturdienstleister, IT- und Kommunikationsspezialisten,
+                Gastronomie oder Dorfläden.
+                Es entstehen Vorteile durch gemeinsame Verwaltungsstrukturen und gemeinsames Auftreten.
                 Anstellungen sind innerhalb der Sozialunternehmen möglich.
                 <a class="button" href="<?php echo Router::url('contact'); ?>">Kontakt aufnehmen</a>
             </p>
@@ -94,8 +101,9 @@
                 Ein Genossenschaftsanteil bei Thinkcamp oder einer lokalen Bürgergenossenschaft ist
                 ein Investment in soziale und nachhaltige Geschäfsideen, dezentrale Strukturen und
                 selbstverwaltete Versorgungsnetze in Bürgerhand.
-                Mitglied zu werden steht auch Menschen mit geringen Einkommen offen,
-                die Einstiegshürde ist sehr niedrig.<br>
+                Mitglied zu werden steht auch Menschen mit geringem Einkommen offen,
+                die Einstiegshürde ist sehr niedrig.
+                Eine Nachschusspflicht für Genossenschaftsmitglieder besteht nicht.<br>
                 Finanzkräftige Investoren ermöglichen durch Zeichnung größerer Anteile
                 die Lösung von Land, Boden und Wohnraum aus dem Wettbewerb oder fördern dadurch
                 den Erwerb anderer Investitionsgüter im Dienste einer solidarischen, weltweiten Gemeinschaft.
@@ -107,7 +115,6 @@
                 Beitrag zum Umweltschutz als auch zur Erhaltung individueller Gesundheit.
                 Alle Mitglieder des Netzwerkes profitieren von lebendigen sozialen
                 Strukturen und der Weitergabe von Wissen.
-                Eine Nachschusspflicht für Genossenschaftsmitglieder besteht nicht.
 
                 <a class="button" href="<?php echo Router::url('terms') ?>">Satzung ThinkCamp gem. eG.</a>
             </p>

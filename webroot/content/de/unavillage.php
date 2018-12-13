@@ -11,7 +11,10 @@
         in denen regional vernetzte Gemeinschaften zusammen leben und arbeiten.
         Erprobt werden gemeinschaftliche Wohnkonzepte, nicht-kommerzielle Landwirtschaft,
         Permakultur und gemeinwohlorientierte Unternehmen in den verschiedensten Bereichen.
+
+        <a class="button" href="<?php echo Router::url('locations'); ?>">Standortkarte</a>
     </p>
+
 </div>
 
 <div class="illustration">

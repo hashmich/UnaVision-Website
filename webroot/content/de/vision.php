@@ -19,6 +19,8 @@
         Vernetzung und Wissensweitergabe.
         Die Standorte von UnaVision sind
         <a class="unavillage" href="<?php echo Router::url('unavillage'); ?>">UnaVillages</a>.
+
+        <a class="button" href="<?php echo Router::url('locations'); ?>">Standortkarte</a>
     </p>
 </div>
 

@@ -32,9 +32,9 @@ class Request {
             $expl = explode('/', $string);
             $this->request = implode(DS, $expl);
             foreach($expl as $part) {
-                $crumbs[$part] = ucfirst(str_replace(array('_','-'), ' ', $part));
+                $crumbs[$part] = ucwords(str_replace(array('_','-'), ' ', $part));
             }
-            $this->title = $this->title.' - '.ucfirst(str_replace(array('_','-'), ' ', end($expl)));
+            $this->title = $this->title.' - '.ucwords(str_replace(array('_','-'), ' ', end($expl)));
             $content_path = 'content'.DS.$this->language.DS.$this->request.'.php';
         }
 
