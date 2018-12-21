@@ -1,9 +1,6 @@
 
 
 .theme-unavision {
-    #submenu li {
-        a, span { color: $blue; }
-    }
     h1,h2,h3,em,.summary,.slogan,hr,.sidebar,a:not(.button) {
         color: $blue;
     }
@@ -12,7 +9,7 @@
     }
 }
 .theme-unaversity {
-    #submenu li {
+    #active.submenu li {
         a, span { color: $green; }
     }
     h1,h2,h3,em,.summary,.slogan,hr,.sidebar,a:not(.button) {
@@ -23,7 +20,7 @@
     }
 }
 .theme-unavillage {
-    #submenu li {
+    .active.submenu li {
         a, span { color: $yellow; }
     }
     h1,h2,h3,em,.summary,.slogan,hr,.sidebar,a:not(.button) {

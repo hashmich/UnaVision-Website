@@ -125,7 +125,7 @@ hr {
     background-color: #fff;
     margin: 0 2vw; }
   #container #content {
-    margin: 3em 2vw 0;
+    margin: 0 2vw 0;
     /* narrow column with sidebar menu */
     /* responsive iframes in a div.iframe-container */
     /* 4x3 Aspect Ratio */ }
@@ -379,14 +379,14 @@ hr {
   z-index: 100;
   border-radius: 10px; }
 
-#menu {
+#primary_menu {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: flex-end;
   padding-top: 30px;
   margin: 0 2vw; }
-  #menu .logo {
+  #primary_menu .logo {
     height: 9vw;
     max-height: 130px;
     min-height: 58px;
@@ -400,39 +400,39 @@ hr {
     margin: 0 1vw;
     background-position: center; }
     @media only screen and (max-width: 32em) {
-      #menu .logo {
+      #primary_menu .logo {
         margin: 0 1vw; } }
-    #menu .logo:last-child, #menu .logo:first-child {
+    #primary_menu .logo:last-child, #primary_menu .logo:first-child {
       margin: 0; }
-    #menu .logo:first-child {
+    #primary_menu .logo:first-child {
       background-position: left; }
-    #menu .logo:last-child {
+    #primary_menu .logo:last-child {
       background-position: right; }
-    #menu .logo:hover {
+    #primary_menu .logo:hover {
       cursor: pointer; }
-    #menu .logo.unavision {
+    #primary_menu .logo.unavision {
       background-image: url(../img/logos/unavision_symbol.png); }
-      #menu .logo.unavision:hover, #menu .logo.unavision.active {
+      #primary_menu .logo.unavision:hover, #primary_menu .logo.unavision.active {
         background-image: url(../img/logos/unavision.png);
         width: 23.4vw;
         max-width: 338px;
         min-width: 150.8px; }
-    #menu .logo.unaversity {
+    #primary_menu .logo.unaversity {
       background-image: url(../img/logos/unaversity_symbol.png); }
-      #menu .logo.unaversity:hover, #menu .logo.unaversity.active {
+      #primary_menu .logo.unaversity:hover, #primary_menu .logo.unaversity.active {
         background-image: url(../img/logos/unaversity.png);
         width: 25.47vw;
         max-width: 367.9px;
         min-width: 164.14px; }
-    #menu .logo.unavillage {
+    #primary_menu .logo.unavillage {
       background-image: url(../img/logos/unavillage_symbol.png); }
-      #menu .logo.unavillage:hover, #menu .logo.unavillage.active {
+      #primary_menu .logo.unavillage:hover, #primary_menu .logo.unavillage.active {
         background-image: url(../img/logos/unavillage.png);
         width: 24.57vw;
         max-width: 354.9px;
         min-width: 158.34px; }
 
-#submenu {
+.submenu {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -441,44 +441,49 @@ hr {
   text-transform: uppercase;
   font-size: 1em;
   width: 100%;
-  margin: 43px 0 0; }
+  margin: 0;
+  padding: 43px 0 3em; }
   @media only screen and (max-width: 32em) {
-    #submenu {
+    .submenu {
       font-size: 0.7em; } }
   @media only screen and (max-width: 60em) {
-    #submenu {
+    .submenu {
       font-size: 0.8em; } }
-  #submenu li {
+  .submenu.unavision li a, .submenu.unavision li span {
+    color: #2387aa; }
+  .submenu.unaversity li a, .submenu.unaversity li span {
+    color: #6b8743; }
+  .submenu.unavillage li a, .submenu.unavillage li span {
+    color: #bea044; }
+  .submenu li {
     margin: 0 1vw;
     letter-spacing: 0.08em; }
-    #submenu li:first-child {
+    .submenu li:first-child {
       margin-left: 2vw; }
-    #submenu li:last-child {
+    .submenu li:last-child {
       margin-right: 2vw; }
-    #submenu li.active {
+    .submenu li.active {
       font-weight: bold;
       color: black; }
-    #submenu li a {
+    .submenu li a {
       text-decoration: none; }
-      #submenu li a:hover {
+      .submenu li a:hover {
         text-decoration: none;
         color: black; }
 
-.theme-unavision #submenu li a, .theme-unavision #submenu li span {
-  color: #2387aa; }
 .theme-unavision h1, .theme-unavision h2, .theme-unavision h3, .theme-unavision em, .theme-unavision .summary, .theme-unavision .slogan, .theme-unavision hr, .theme-unavision .sidebar, .theme-unavision a:not(.button) {
   color: #2387aa; }
 .theme-unavision hr, .theme-unavision .button {
   background-color: #2387aa; }
 
-.theme-unaversity #submenu li a, .theme-unaversity #submenu li span {
+.theme-unaversity #active.submenu li a, .theme-unaversity #active.submenu li span {
   color: #6b8743; }
 .theme-unaversity h1, .theme-unaversity h2, .theme-unaversity h3, .theme-unaversity em, .theme-unaversity .summary, .theme-unaversity .slogan, .theme-unaversity hr, .theme-unaversity .sidebar, .theme-unaversity a:not(.button) {
   color: #6b8743; }
 .theme-unaversity hr, .theme-unaversity .button {
   background-color: #6b8743; }
 
-.theme-unavillage #submenu li a, .theme-unavillage #submenu li span {
+.theme-unavillage .active.submenu li a, .theme-unavillage .active.submenu li span {
   color: #bea044; }
 .theme-unavillage h1, .theme-unavillage h2, .theme-unavillage h3, .theme-unavillage em, .theme-unavillage .summary, .theme-unavillage .slogan, .theme-unavillage hr, .theme-unavillage .sidebar, .theme-unavillage a:not(.button) {
   color: #bea044; }

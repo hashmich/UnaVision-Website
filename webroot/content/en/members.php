@@ -15,6 +15,6 @@
         if you want to learn more.
     </p>
     <p>
-        <a href="https://confluence.unavision.org" target="_blank">members.unavision.org</a>
+        <a href="https://members.unavision.org" target="_blank">members.unavision.org</a>
     </p>
 </div>

@@ -5,7 +5,7 @@ $min-height: 58px;
 
 
 
-#menu {
+#primary_menu {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
@@ -71,7 +71,7 @@ $min-height: 58px;
 	}
 }
 
-#submenu {
+.submenu {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
@@ -81,7 +81,8 @@ $min-height: 58px;
 	font-size: 1em;
 	// reserve space for the items' margin
 	width: 100%; // (instead $layout-width)
-	margin: 43px 0 0;
+	margin: 0;
+	padding: 43px 0 3em;
 	@include respond-to(handhelds) {
 		font-size: 0.7em;
 	}
@@ -89,6 +90,15 @@ $min-height: 58px;
 		font-size: 0.8em;
 	}
 
+	&.unavision li {
+		a, span { color: $blue; }
+	}
+	&.unaversity li {
+		a, span { color: $green; }
+	}
+	&.unavillage li {
+		a, span { color: $yellow; }
+	}
 
 
 	li {

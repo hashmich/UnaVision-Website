@@ -12,11 +12,18 @@ $(document).ready(function() {
     });
 
     var activeLogo = $('a.logo.active');
+    var activeSubmenu = $('.active.submenu');
 
-    $('a.logo').hover(function() {
-        if(!$(this).hasClass('active')) {
-            activeLogo.toggleClass('active');
-        }
+    $('a.logo').hover(function(event) {
+        toggleMenu(this);
+    });
+    // for touch-devices
+    $('a.logo').click(function () {
+        toggleMenu(this);
+    });
+
+    $('#menu').mouseleave(function() {
+        menuRevert(activeSubmenu, activeLogo);
     });
 
     if($('#map').length) {
@@ -99,12 +106,26 @@ $(document).ready(function() {
 });
 
 
-/*
-function adjustMenuHeight() {
-    var menuHeight = $('#menu-container').height();
-    $('#content').css('margin-top', menuHeight + 50 + 'px');
+function toggleMenu(currentLogo) {
+    if(!$(currentLogo).hasClass('active')) {
+        $('#menu a.logo').removeClass('active');
+        $(currentLogo).addClass('active');
+        $('.submenu').hide();
+        var currentMenu = $('.submenu.'+currentLogo.className
+            .replace('logo ','')
+            .replace(' active',''));
+        currentMenu.show();
+    }
 }
-*/
+
+
+function menuRevert(activeSubmenu, activeLogo) {
+    $('#menu a.logo').removeClass('active');
+    activeLogo.addClass('active');
+    $('.submenu').hide();
+    activeSubmenu.show();
+}
+
 
 function setLanguage(lang) {
     // expiry in 14 days

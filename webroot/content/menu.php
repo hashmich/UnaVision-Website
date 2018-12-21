@@ -5,38 +5,40 @@ $menu = array(
     'unavillage' => 'UnaVillage'
 );
 
-$request = $Request->getRequest();
-switch($Request->getTheme()) {
-    case 'unaversity':
-         $submenu = array(
-            'unaversity' => array(
-                'de' => 'UnaVersity',
-                'en' => 'UnaVersity'
-            ),
-            'events' => array(
-                'de' => 'Veranstaltungen',
-                'en' => 'Events'
-            ),
-            'vision-lab' => array(
-                'de' => 'Visions-Labor',
-                'en' => 'Vision-Lab'
-            )
-        );
-        break;
-    case 'unavillage':
-        $submenu = array(
-            'unavillage' => array(
-                'de' => 'Gemeinschaft',
-                'en' => 'Community'
-            ),
-            'locations' => array(
-                'de' => 'Standorte',
-                'en' => 'Locations'
-            ),
-            'cooperations' => array(
-                'de' => 'Kooperationen',
-                'en' => 'Cooperations'
-            ),/*
+
+
+function getSubmenu($theme) {
+    switch(strtolower($theme)) {
+        case 'unaversity':
+            return array(
+                'unaversity' => array(
+                    'de' => 'UnaVersity',
+                    'en' => 'UnaVersity'
+                ),
+                'events' => array(
+                    'de' => 'Veranstaltungen',
+                    'en' => 'Events'
+                ),
+                'vision-lab-2019' => array(
+                    'de' => 'Visions-Labor',
+                    'en' => 'Vision-Lab'
+                )
+            );
+            break;
+        case 'unavillage':
+            return array(
+                'unavillage' => array(
+                    'de' => 'Gemeinschaft',
+                    'en' => 'Community'
+                ),
+                'locations' => array(
+                    'de' => 'Standorte',
+                    'en' => 'Locations'
+                ),
+                'cooperations' => array(
+                    'de' => 'Kooperationen',
+                    'en' => 'Cooperations'
+                ),/*
             'prototype' => array(
                 'de' => 'Prototyp',
                 'en' => 'Prototype'
@@ -47,65 +49,83 @@ switch($Request->getTheme()) {
                 'en' => 'People'
             )
             */
-        );
-        break;
-    case 'unavision':
-    default:
+            );
+            break;
+        case 'unavision':
+        default:
 
-    $submenu = array(
-        'vision' => array(
-            'de' => 'Vision',
-            'en' => 'Vision'
-        ),
-        'participate' => array(
-            'de' => 'Mitmachen',
-            'en' => 'Participate'
-        ),
-        'newsletter' => array(
-            'de' => 'Newsletter',
-            'en' => 'Newsletter'
-        ),
-        'contact' => array(
-            'de' => 'Kontakt',
-            'en' => 'Contact'
-        ),
-        'members' => array(
-            'de' => 'Intern',
-            'en' => 'Internal'
-        )
-    );
+            return array(
+                'vision' => array(
+                    'de' => 'Vision',
+                    'en' => 'Vision'
+                ),
+                'participate' => array(
+                    'de' => 'Mitmachen',
+                    'en' => 'Participate'
+                ),
+                'newsletter' => array(
+                    'de' => 'Newsletter',
+                    'en' => 'Newsletter'
+                ),
+                'contact' => array(
+                    'de' => 'Kontakt',
+                    'en' => 'Contact'
+                ),
+                'members' => array(
+                    'de' => 'Intern',
+                    'en' => 'Internal'
+                )
+            );
+    }
 }
-
-echo '<div id="menu">';
-$i = 0;
-foreach($menu as $k => $v) {
-    $class = 'class="logo '.strtolower($v);
-    if($Request->getTheme() == strtolower($v)) $class .= ' active';
-    $class .= '"';
-    $i++;
-
-    if($k == 'vision') $k = '/';
-
-    echo '<a '.$class.' href="'.Router::url($k).'">';
-    echo $v;
-    echo '</a>';
-}
-echo '</div>';
 ?>
 
 
-<?php $lang = $Request->getUserLanguage(); ?>
-<ul id="submenu">
-    <?php
-    foreach($submenu as $k => $v) {
-        $active = null;
-        if($k == $Request->getRequest() OR ($Request->getRequest() == '/' AND $k == 'vision'))
-            $active = ' class="active"';
+<div id="menu">
+    <div id="primary_menu">
 
-        echo '<li'.$active.'>';
-        echo '<a href="'.Router::url($k).'">'.$v[$lang].'</a>';
-        echo '</li>';
+        <?php
+        $i = 0;
+        foreach($menu as $k => $v) {
+            $class = 'class="logo '.strtolower($v);
+            if($Request->getTheme() == strtolower($v)) $class .= ' active';
+            $class .= '"';
+            $i++;
+
+            if($k == 'vision') $k = '/';
+
+            echo '<a '.$class.' href="'.Router::url($k).'">';
+            echo $v;
+            echo '</a>';
+        }
+        ?>
+    </div>
+
+    <?php
+    $lang = $Request->getUserLanguage();
+    foreach($menu as $k => $v) {
+        $submenu = getSubmenu($v);
+        $class = 'submenu '.strtolower($v);
+        $hidden = ' style="display:none"';
+        if(strtolower($v) == $Request->getTheme()) {
+            $class .= ' active';
+            $hidden = null;
+        }
+        ?>
+        <ul class="<?php echo $class; ?>"<?php echo $hidden; ?>>
+            <?php
+            foreach($submenu as $k => $v) {
+                $active = null;
+                if($k == $Request->getRequest() OR ($Request->getRequest() == '/' AND $k == 'vision'))
+                    $active = ' class="active"';
+
+                echo '<li'.$active.'>';
+                echo '<a href="'.Router::url($k).'">'.$v[$lang].'</a>';
+                echo '</li>';
+            }
+            ?>
+        </ul>
+        <?php
     }
     ?>
-</ul>
-
+</div>
