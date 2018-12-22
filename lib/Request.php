@@ -76,6 +76,7 @@ class Request {
 
     private function getErrorMessage() {
         $_SESSION['flash'] = '<div id="notification" style="display:none;"><div>'
+            .'<p><strong>UnaError</strong></p>'
             .'<p>The requested page does not exist.</p>'
             .'<p>Maybe you are using a link from the old website.</p>'
             .'</div></div>';
