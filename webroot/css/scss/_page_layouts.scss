@@ -35,6 +35,7 @@
             margin-left: 0;
             li {
                 font-weight: normal;
+                text-transform: uppercase;
                 //text-align: right;
                 cursor: pointer;
                 &:hover {
@@ -150,6 +151,9 @@
     width: 100%;
     height: 80vh;
     outline: none;
+    .mapboxgl-canvas-container {
+        outline: none;
+    }
     .mapbox-improve-map {
         display: none;
     }

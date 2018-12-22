@@ -27,7 +27,7 @@
                 Germany
             </p>
             <p>
-                Besuche bitte nach Absprache unter:<br>
+                Besuche bitte nach Absprache<br>
                 <a href="mailto:oderbruch@unavision.eu">oderbruch@unavision.eu</a>
             </p>
 
@@ -57,26 +57,25 @@
         </div>
 
         <div id="working-circles" class="accordeon text-column">
-            <h2>Arbeitskreise</h2>
-            <h3>Öffentlichkeitsarbeit</h3>
+            <h2>Öffentlichkeitsarbeit</h2>
             <p>
                 <a href="mailto:pr@unavision.eu">pr@unavision.eu</a><br>
                 Lea Giesecke, Hendrik Schmeer
             </p>
 
-            <h3>Veranstaltungen &amp; Transformatives Lernen</h3>
+            <h2>Veranstaltungen &amp; Transformatives Lernen</h2>
             <p>
                 <a href="mailto:unaversity@unavision.eu">unaversity@unavision.eu</a><br>
                 Johannes Pfister
             </p>
 
-            <h3>Finanzen &amp; Funding</h3>
+            <h2>Finanzen &amp; Funding</h2>
             <p>
                 <a href="mailto:funding@unavision.eu">funding@unavision.eu</a><br>
                 Christoph Drescher, Johannes Pfister
             </p>
 
-            <h3>Architektur</h3>
+            <h2>Architektur</h2>
             <p>
                 <a href="mailto:architecture@unavision.eu">architecture@unavision.eu</a><br>
                 Ulrich Senoner (Oderbruch),<br>
@@ -87,13 +86,12 @@
         </div>
 
         <div class="accordeon text-column" id="general">
-            <h2>Allgemeiner Kontakt</h2>
-            <h3>Mail</h3>
+            <h2>Mail</h2>
             <p>
                 <a href="mailto:info@unavision.eu">info@unavision.eu</a>
             </p>
 
-            <h3>Anschrift</h3>
+            <h2>Anschrift</h2>
             <p>
                 ThinkCamp eG.<br>
                 Herzershof 10 <br>
@@ -101,7 +99,7 @@
                 Germany
             </p>
 
-            <h3>Kontoverbindung</h3>
+            <h2>Kontoverbindung</h2>
             <p>
                 GLS Bank Bochum<br>
                 IBAN: DE32 4306 0967 8205 0764 00<br>
