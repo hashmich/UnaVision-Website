@@ -57,20 +57,16 @@ class Request {
         $msg = null;
         ob_start();
         // check availability of the file in preferred language, use available language if not
-        if(!file_exists('..'.DS.'webroot'.DS.$this->content_path)) {
-            foreach($this->accept_languages as $al) {
-                $this->content_path = 'content'.DS.$al.DS.$this->request.'.php';
-                if(file_exists('..'.DS.'webroot'.DS.$this->content_path)) {
-                    $msg = $this->getAlternativeLanguageMessage();
-                    break;
-                }
-            }
+        $msg = $this->_getLanguageContent($this->request);
+
+        if(!empty($_SESSION['flash'])) {
+            $msg = $_SESSION['flash'];
+            unset($_SESSION['flash']);
         }
-        // render error page if no file exists
+
+        // render error message if no file exists, show homepage
         if(!file_exists('..'.DS.'webroot'.DS.$this->content_path)) {
-            $this->content_path = 'content'.DS.'error.php';
-            $title = 'Error';
-            $msg = null;
+            $msg = $this->getErrorMessage();
         }
 
         echo $msg;
@@ -78,13 +74,36 @@ class Request {
         return ob_get_clean();
     }
 
+    private function getErrorMessage() {
+        $_SESSION['flash'] = '<div id="notification" style="display:none;"><div>'
+            .'<p>The requested page does not exist.</p>'
+            .'<p>Maybe you are using a link from the old website.</p>'
+            .'</div></div>';
+        header('Location: '.str_replace('webroot/index.php', '', $_SERVER['SCRIPT_NAME']));
+        die();
+
+    }
+
+    private function _getLanguageContent($pageName = null) {
+        if(!file_exists('..'.DS.'webroot'.DS.$this->content_path)) {
+            foreach($this->accept_languages as $al) {
+                $this->content_path = 'content'.DS.$al.DS.$pageName.'.php';
+                if(file_exists('..'.DS.'webroot'.DS.$this->content_path)) {
+                    return $this->getAlternativeLanguageMessage();
+                    break;
+                }
+            }
+        }
+        return null;
+    }
+
     private function getAlternativeLanguageMessage() {
         $alternatives = '[ <span class="lang-select' . ($this->language == 'en'?' active':'')
             . '" value="en">EN</span> |'
             .'<span class="lang-select' . ($this->language == 'de'?' active':'')
             . '" value="de">DE</span> ]';
+        $msg = null;
         if($this->request != 'error') {
-            $msg = null;
             switch($this->language) {
                 case 'de':
                     $msg = '<p class="no-lang">Leider ist dieser Inhalt nicht auf Deutsch verfügbar.</p>'
@@ -98,8 +117,9 @@ class Request {
                     $msg = '<p class="no-lang">Sorry, content not available in language: ' . $this->language . '</p>'
                         . '<p class="language">Alternative languages: ' . $alternatives . '</p>';
             }
-            return '<div id="notification" style="display:none;">'.$msg.'</div>';
+            return '<div id="notification" style="display:none;"><div>'.$msg.'</div></div>';
         }
+        return $msg;
     }
 
 

@@ -374,13 +374,17 @@ hr {
   bottom: 50px;
   right: 50px;
   width: 400px;
-  height: 75px;
   padding: 20px;
   background-color: black;
   opacity: 0.75;
   color: #fff;
   z-index: 100;
-  border-radius: 10px; }
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+  #notification p {
+    margin: 0 0 5px; }
 
 #primary_menu {
   display: flex;
