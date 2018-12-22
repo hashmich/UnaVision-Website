@@ -1,8 +1,8 @@
 <?php
 $menu = array(
     'vision' => 'UnaVision',
-    'unaversity' => 'UnaVersity',
-    'unavillage' => 'UnaVillage'
+    'events' => 'UnaVersity',
+    'locations' => 'UnaVillage'
 );
 
 
@@ -11,49 +11,46 @@ function getSubmenu($theme) {
     switch(strtolower($theme)) {
         case 'unaversity':
             return array(
-                'unaversity' => array(
-                    'de' => 'UnaVersity',
-                    'en' => 'UnaVersity'
-                ),
                 'events' => array(
                     'de' => 'Veranstaltungen',
                     'en' => 'Events'
+                ),
+                'unaversity' => array(
+                    'de' => 'UnaVersity',
+                    'en' => 'UnaVersity'
                 ),
                 'vision-lab-2019' => array(
                     'de' => 'Visions-Labor',
                     'en' => 'Vision-Lab'
                 )
             );
-            break;
         case 'unavillage':
             return array(
-                'unavillage' => array(
-                    'de' => 'Gemeinschaft',
-                    'en' => 'Community'
-                ),
                 'locations' => array(
                     'de' => 'Standorte',
                     'en' => 'Locations'
+                ),
+                'unavillage' => array(
+                    'de' => 'Gemeinschaft',
+                    'en' => 'Community'
                 ),
                 'cooperations' => array(
                     'de' => 'Kooperationen',
                     'en' => 'Cooperations'
                 ),/*
-            'prototype' => array(
-                'de' => 'Prototyp',
-                'en' => 'Prototype'
-            ),
-            /*
-            array(
-                'de' => 'Leute',
-                'en' => 'People'
-            )
-            */
+                'prototype' => array(
+                    'de' => 'Prototyp',
+                    'en' => 'Prototype'
+                ),
+                /*
+                array(
+                    'de' => 'Leute',
+                    'en' => 'People'
+                )
+                */
             );
-            break;
         case 'unavision':
         default:
-
             return array(
                 'vision' => array(
                     'de' => 'Vision',
